@@ -1,3 +1,7 @@
 Debug.win32
 frameworks/runtime-src/proj.win32/.vs/
 simulator/win32/Resources/
+frameworks/cocos2d-x/cocos/platform/android/libcocos2dx/build/
+frameworks/runtime-src/proj.android/app/.cxx/
+frameworks/runtime-src/proj.android/app/assets/
+frameworks/runtime-src/proj.android/.idea/
