@@ -1292,10 +1292,12 @@ void Director::createStatsLabel()
 
     Texture2D::setDefaultAlphaPixelFormat(currentFormat);
 
+    int x = 0;
+    auto bottomLeft = getSafeAreaRect().origin;
     const int height_spacing = (int)(22 / CC_CONTENT_SCALE_FACTOR());
-    _drawnVerticesLabel->setPosition(Vec2(0, height_spacing*2.0f) + CC_DIRECTOR_STATS_POSITION);
-    _drawnBatchesLabel->setPosition(Vec2(0, height_spacing*1.0f) + CC_DIRECTOR_STATS_POSITION);
-    _FPSLabel->setPosition(Vec2(0, height_spacing*0.0f)+CC_DIRECTOR_STATS_POSITION);
+    _drawnVerticesLabel->setPosition(Vec2(x, height_spacing*2.0f) + bottomLeft);
+    _drawnBatchesLabel->setPosition(Vec2(x, height_spacing*1.0f) + bottomLeft);
+    _FPSLabel->setPosition(Vec2(x, height_spacing*0.0f) + bottomLeft);
 }
 
 #endif // #if !CC_STRIP_FPS

@@ -23,65 +23,33 @@
  ****************************************************************************/
 
 
-#include "PlayerMenuServiceProtocol.h"
+#import <Cocoa/Cocoa.h>
 
-PLAYER_NS_BEGIN
-
-PlayerMenuItem::PlayerMenuItem()
-: _order(0)
-, _isGroup(false)
-, _isEnabled(true)
-, _isChecked(false)
+@interface ConsoleWindowController : NSWindowController
 {
+    NSTextView *textView;
+    IBOutlet NSButton *checkScroll;
+    IBOutlet NSButton *topCheckBox;
+    NSMutableArray *linesCount;
+    NSUInteger traceCount;
+    
+    NSString *logpath;
+    FILE *_logFd;
 }
 
-PlayerMenuItem::~PlayerMenuItem()
-{
-}
+@property (assign) IBOutlet NSTextView *textView;
 
-std::string PlayerMenuItem::getMenuId() const
-{
-    return _menuId;
-}
+- (void) trace:(NSString*)msg;
+- (void) setLogpath:(NSString*)path;
+- (void) syncLogToConsole;
+- (void)setBackgroundColor:(NSColor*)color;
 
-std::string PlayerMenuItem::getTitle() const
-{
-    return _title;
-}
 
-int PlayerMenuItem::getOrder() const
-{
-    return _order;
-}
+- (IBAction)onClear:(id)sender;
+- (IBAction)onScrollChange:(id)sender;
+- (IBAction)onTopChange:(id)sender;
 
-bool PlayerMenuItem::isGroup() const
-{
-    return _isGroup;
-}
+@end
 
-bool PlayerMenuItem::isEnabled() const
-{
-    return _isEnabled;
-}
 
-bool PlayerMenuItem::isChecked() const
-{
-    return _isChecked;
-}
 
-std::string PlayerMenuItem::getShortcut() const
-{
-    return _shortcut;
-}
-
-void PlayerMenuItem::setCallback(std::function<void ()> callback)
-{
-    _callback = callback;
-}
-
-std::function<void()> PlayerMenuItem::getCallback() const
-{
-    return _callback;
-}
-
-PLAYER_NS_END

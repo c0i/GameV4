@@ -1,4 +1,5 @@
 /****************************************************************************
+ Copyright (c) 2010 cocos2d-x.org
  Copyright (c) 2017-2018 Xiamen Yaji Software Co., Ltd.
  
  http://www.cocos2d-x.org
@@ -23,65 +24,31 @@
  ****************************************************************************/
 
 
-#include "PlayerMenuServiceProtocol.h"
+#include <string>
+#import <Cocoa/Cocoa.h>
 
-PLAYER_NS_BEGIN
+#import "ConsoleWindowController.h"
+#include "ProjectConfig/ProjectConfig.h"
+#include "ProjectConfig/SimulatorConfig.h"
+#include "AppDelegate.h"
 
-PlayerMenuItem::PlayerMenuItem()
-: _order(0)
-, _isGroup(false)
-, _isEnabled(true)
-, _isChecked(false)
+@interface AppController : NSObject <NSApplicationDelegate, NSWindowDelegate, NSFileManagerDelegate>
 {
+    NSWindow *_window;
+    NSMenu *menu;
+    
+    AppDelegate *_app;
+    ProjectConfig _project;
+    std::string _entryPath;
+    
+    //log file
+    ConsoleWindowController *_consoleController;
 }
 
-PlayerMenuItem::~PlayerMenuItem()
-{
-}
+@property (nonatomic, assign) IBOutlet NSMenu* menu;
 
-std::string PlayerMenuItem::getMenuId() const
-{
-    return _menuId;
-}
+-(BOOL)application:(NSApplication*)app openFile:(NSString*)path;
+-(IBAction)onFileClose:(id)sender;
+-(IBAction)onWindowAlwaysOnTop:(id)sender;
 
-std::string PlayerMenuItem::getTitle() const
-{
-    return _title;
-}
-
-int PlayerMenuItem::getOrder() const
-{
-    return _order;
-}
-
-bool PlayerMenuItem::isGroup() const
-{
-    return _isGroup;
-}
-
-bool PlayerMenuItem::isEnabled() const
-{
-    return _isEnabled;
-}
-
-bool PlayerMenuItem::isChecked() const
-{
-    return _isChecked;
-}
-
-std::string PlayerMenuItem::getShortcut() const
-{
-    return _shortcut;
-}
-
-void PlayerMenuItem::setCallback(std::function<void ()> callback)
-{
-    _callback = callback;
-}
-
-std::function<void()> PlayerMenuItem::getCallback() const
-{
-    return _callback;
-}
-
-PLAYER_NS_END
+@end

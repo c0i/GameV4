@@ -730,8 +730,7 @@ void ProjectConfig::dump()
     CCLOG("    frame size: %0.0f x %0.0f", _frameSize.width, _frameSize.height);
     CCLOG("    frame scale: %0.2f", _frameScale);
     CCLOG("    show console: %s", _showConsole ? "YES" : "NO");
-    CCLOG("    write debug log: %s (%s)", _writeDebugLogToFile ? getDebugLogFilePath().c_str() : "NO",
-                                          _writeDebugLogToFile ? getDebugLogFilePath().c_str() : "");
+    CCLOG("    write debug log: (%s)", getDebugLogFilePath().c_str());
     CCLOG("    listen: %s", _bindAddress.c_str());
 
     if (_debuggerType == kCCRuntimeDebuggerLDT)

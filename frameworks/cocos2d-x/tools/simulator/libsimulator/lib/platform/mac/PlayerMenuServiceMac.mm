@@ -110,6 +110,11 @@ static bool __G_IS_MENUBAR_ENABLED__ = true;    // WTF
 
 -(void) onClicked:(id)sender
 {
+    if (self.macMenuItem->getCallback())
+    {
+        self.macMenuItem->getCallback()();
+    }
+    
     AppEvent event(kAppEventName, APP_EVENT_MENU);
     
     std::stringstream buf;

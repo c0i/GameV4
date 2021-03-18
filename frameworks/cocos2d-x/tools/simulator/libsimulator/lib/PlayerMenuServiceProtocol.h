@@ -58,6 +58,9 @@ public:
     virtual void setChecked(bool checked) = 0;
     virtual void setShortcut(const std::string &shortcut) = 0;
 
+    std::function<void()> getCallback() const;
+    void setCallback(std::function<void()> callback);
+    
 protected:
     PlayerMenuItem();
 
@@ -68,6 +71,7 @@ protected:
     bool _isEnabled;
     bool _isChecked; // ignored when isGroup = true
     std::string _shortcut; // ignored when isGroup = true
+    std::function<void()> _callback = nullptr;
 };
 
 class PlayerMenuServiceProtocol : public PlayerServiceProtocol

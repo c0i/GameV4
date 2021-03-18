@@ -6,6 +6,13 @@ Game with Cocos2d-x V4 [commit](https://github.com/cocos2d/cocos2d-x/commit/95e5
 
 ## iOS/macOS
 
+```
+open frameworks/runtime-src/proj.ios_mac/gamev4.xcodeproj
+```
+
+1. macOS 10.15.7
+2. Xcode 12.4
+
 ## Android
 
 Use `Android Studio` import the `frameworks/runtime-src/proj.android` project file.

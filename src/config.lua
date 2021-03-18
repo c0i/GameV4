@@ -13,7 +13,7 @@ CC_DISABLE_GLOBAL = true
 
 -- for module display
 CC_DESIGN_RESOLUTION = {
-    width = 960,
+    width = 1136,
     height = 640,
     autoscale = "FIXED_HEIGHT",
     callback = function(framesize)
