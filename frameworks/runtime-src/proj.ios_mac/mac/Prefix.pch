@@ -4,6 +4,9 @@
 
 #ifdef __OBJC__
 	#import <Cocoa/Cocoa.h>
+    #import <Foundation/Foundation.h>
+
+    #import "SimulatorLog.h"
 #endif
 
 #ifdef __cplusplus

@@ -653,7 +653,13 @@ static void glfwDropFunc(GLFWwindow *window, int count, const char **files)
     NSColor *bgcolor = [NSColor colorWithRed:255.0/255.0 green:252.0/255.0 blue:232.0/255.0 alpha:1.0];
     [_consoleController setBackgroundColor:bgcolor];
 
+    [SimulatorLog setRedirectNSLogEnabled:YES];
     [_consoleController syncLogToConsole];
+    
+    NSDateFormatter *dateFormatter = [[[NSDateFormatter alloc] init] autorelease];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    NSLog(@"%@", [dateFormatter stringFromDate:[NSDate date]]);
+    
 }
 
 - (void) setZoom:(float)scale
