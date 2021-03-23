@@ -214,6 +214,42 @@ namespace utils
     * @lua NA
     */
     CC_DLL std::vector<int> parseIntegerList(const std::string &intsString);
+
+    /**
+   * Create a Game Object with 'bool T::init()', like CREATE_FUNC, but more powerful
+
+   * @return  Returns a game object
+   * @remark  You need call release after you don't want use it manually
+   * @limition  The init function finit must be public
+   */
+    template <typename T, typename F, typename... Ts>
+    static T* newInstance(F&& memf, Ts&&... args)
+    {
+        T* pRet = new(std::nothrow) T();
+        if (pRet && std::mem_fn(memf)(pRet, std::forward<Ts>(args)...))
+        {
+            return pRet;
+        }
+        else
+        {
+            delete pRet;
+            pRet = nullptr;
+            return nullptr;
+        }
+    }
+
+    /**
+    * Create a Game Object with 'bool T::init()', like CREATE_FUNC, but more powerful
+    
+    * @return  Returns a game object
+    * @remark  You need call release after you don't want use it manually
+    * @limition  The init function finit must be public
+    */
+    template<typename T> inline
+        static T* newInstance()
+    {
+        return newInstance<T>(&T::init);
+    }
 }
 
 NS_CC_END

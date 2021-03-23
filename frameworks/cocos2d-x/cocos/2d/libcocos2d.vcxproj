@@ -84,7 +84,7 @@
     </PreBuildEvent>
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(MSBuildProgramFiles32)\Microsoft SDKs\Windows\v7.1A\include;$(EngineRoot)external\Box2D\include;$(EngineRoot)external\sqlite3\include;$(EngineRoot)external\unzip;$(EngineRoot)external\edtaa3func;$(EngineRoot)external\tinyxml2;$(EngineRoot)external\png\include\win32;$(EngineRoot)external\jpeg\include\win32;$(EngineRoot)external\tiff\include\win32;$(EngineRoot)external\webp\include\win32;$(EngineRoot)external\freetype2\include\win32;$(EngineRoot)external\win32-specific\OpenalSoft\include;$(EngineRoot)external\win32-specific\MP3Decoder\include;$(EngineRoot)external\win32-specific\OggDecoder\include;$(EngineRoot)external\win32-specific\icon\include;$(EngineRoot)external\win32-specific\zlib\include;$(EngineRoot)external\chipmunk\include;$(EngineRoot)external\xxhash;$(EngineRoot)external\ConvertUTF;$(EngineRoot)external\curl\include\win32;$(EngineRoot)external\websockets\include\win32;$(EngineRoot)external\poly2tri\common;$(EngineRoot)external\poly2tri\sweep;$(EngineRoot)external\poly2tri;$(EngineRoot)external;$(EngineRoot)cocos;$(EngineRoot)cocos\editor-support;$(EngineRoot)cocos\platform\;$(EngineRoot)cocos\editor-support\spine;$(EngineRoot)cocos\platform\win8.1-universal;$(EngineRoot)extensions;$(EngineRoot);$(EngineRoot)external/bullet/include/bullet;$(EngineRoot)external/bullet/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(MSBuildProgramFiles32)\Microsoft SDKs\Windows\v7.1A\include;$(EngineRoot)external\Box2D\include;$(EngineRoot)external\sqlite3\include;$(EngineRoot)external\unzip;$(EngineRoot)external\edtaa3func;$(EngineRoot)external\tinyxml2;$(EngineRoot)external\png\include\win32;$(EngineRoot)external\jpeg\include\win32;$(EngineRoot)external\tiff\include\win32;$(EngineRoot)external\webp\include\win32;$(EngineRoot)external\freetype2\include\win32;$(EngineRoot)external\win32-specific\OpenalSoft\include;$(EngineRoot)external\win32-specific\MP3Decoder\include;$(EngineRoot)external\win32-specific\OggDecoder\include;$(EngineRoot)external\win32-specific\icon\include;$(EngineRoot)external\win32-specific\zlib\include;$(EngineRoot)external\chipmunk\include;$(EngineRoot)external\xxhash;$(EngineRoot)external\ConvertUTF;$(EngineRoot)external\curl\include\win32;$(EngineRoot)external\websockets\include\win32;$(EngineRoot)external\poly2tri\common;$(EngineRoot)external\poly2tri\sweep;$(EngineRoot)external\poly2tri;$(EngineRoot)external;$(EngineRoot)cocos;$(EngineRoot)cocos\editor-support;$(EngineRoot)cocos\platform\;$(EngineRoot)cocos\editor-support\spine;$(EngineRoot)cocos\platform\win8.1-universal;$(EngineRoot)extensions;$(EngineRoot)extensions\ImGuiEXT;$(EngineRoot)extensions\ImGuiEXT\imgui;$(EngineRoot);$(EngineRoot)external/bullet/include/bullet;$(EngineRoot)external/bullet/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_USRDLL;_DEBUG;_WINDOWS;_LIB;LWS_DLL;COCOS2DXWIN32_EXPORTS;GL_GLEXT_PROTOTYPES;COCOS2D_DEBUG=1;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;_USE3DDLL;_EXPORT_DLL_;_USRSTUDIODLL;_USREXDLL;_USEGUIDLL;CC_ENABLE_CHIPMUNK_INTEGRATION=1;PROTOBUF_USE_DLLS;LIBPROTOBUF_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <MinimalRebuild>false</MinimalRebuild>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -219,6 +219,13 @@ xcopy /Y /Q "$(ProjectDir)..\..\external\uv\prebuilt\win32\*.*" "$(OutDir)"</Com
     <ClCompile Include="..\..\extensions\GUI\CCScrollView\CCScrollView.cpp" />
     <ClCompile Include="..\..\extensions\GUI\CCScrollView\CCTableView.cpp" />
     <ClCompile Include="..\..\extensions\GUI\CCScrollView\CCTableViewCell.cpp" />
+    <ClCompile Include="..\..\extensions\ImGuiEXT\CCImGuiEXT.cpp" />
+    <ClCompile Include="..\..\extensions\ImGuiEXT\imgui\imgui.cpp" />
+    <ClCompile Include="..\..\extensions\ImGuiEXT\imgui\imgui_demo.cpp" />
+    <ClCompile Include="..\..\extensions\ImGuiEXT\imgui\imgui_draw.cpp" />
+    <ClCompile Include="..\..\extensions\ImGuiEXT\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="..\..\extensions\ImGuiEXT\imgui\misc\cpp\imgui_stdlib.cpp" />
+    <ClCompile Include="..\..\extensions\ImGuiEXT\imgui_impl_cocos2dx.cpp" />
     <ClCompile Include="..\..\extensions\Particle3D\CCParticle3DAffector.cpp" />
     <ClCompile Include="..\..\extensions\Particle3D\CCParticle3DEmitter.cpp" />
     <ClCompile Include="..\..\extensions\Particle3D\CCParticle3DRender.cpp" />
@@ -783,6 +790,15 @@ xcopy /Y /Q "$(ProjectDir)..\..\external\uv\prebuilt\win32\*.*" "$(OutDir)"</Com
     <ClInclude Include="..\..\extensions\GUI\CCScrollView\CCScrollView.h" />
     <ClInclude Include="..\..\extensions\GUI\CCScrollView\CCTableView.h" />
     <ClInclude Include="..\..\extensions\GUI\CCScrollView\CCTableViewCell.h" />
+    <ClInclude Include="..\..\extensions\ImGuiEXT\CCImGuiEXT.h" />
+    <ClInclude Include="..\..\extensions\ImGuiEXT\imgui\imconfig.h" />
+    <ClInclude Include="..\..\extensions\ImGuiEXT\imgui\imgui.h" />
+    <ClInclude Include="..\..\extensions\ImGuiEXT\imgui\imgui_internal.h" />
+    <ClInclude Include="..\..\extensions\ImGuiEXT\imgui\imstb_rectpack.h" />
+    <ClInclude Include="..\..\extensions\ImGuiEXT\imgui\imstb_textedit.h" />
+    <ClInclude Include="..\..\extensions\ImGuiEXT\imgui\imstb_truetype.h" />
+    <ClInclude Include="..\..\extensions\ImGuiEXT\imgui\misc\cpp\imgui_stdlib.h" />
+    <ClInclude Include="..\..\extensions\ImGuiEXT\imgui_impl_cocos2dx.h" />
     <ClInclude Include="..\..\extensions\Particle3D\CCParticle3DAffector.h" />
     <ClInclude Include="..\..\extensions\Particle3D\CCParticle3DEmitter.h" />
     <ClInclude Include="..\..\extensions\Particle3D\CCParticle3DRender.h" />

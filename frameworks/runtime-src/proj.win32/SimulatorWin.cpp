@@ -771,7 +771,7 @@ std::string SimulatorWin::getApplicationPath()
 std::string SimulatorWin::getWorkspacePath()
 {
     std::string appExeFolder = getApplicationPath();
-    string workspace = appExeFolder + "./../../";
+    string workspace = appExeFolder + "/../../";
     string workspaceSrcPath = workspace + "./src/";
     auto fs = FileUtils::getInstance();
     if (fs->isDirectoryExist(workspace) && fs->isDirectoryExist(workspaceSrcPath))
