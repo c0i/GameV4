@@ -5,6 +5,7 @@ VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 12.0.21005.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gamev4", "gamev4.vcxproj", "{4E6A7A0E-DDD8-4BAA-8B22-C964069364ED}"
 	ProjectSection(ProjectDependencies) = postProject
+		{187D3E60-961A-41EE-BC18-C510A431D22E} = {187D3E60-961A-41EE-BC18-C510A431D22E}
 		{B7C2A162-DEC9-4418-972E-240AB3CBFCAE} = {B7C2A162-DEC9-4418-972E-240AB3CBFCAE}
 		{41E34993-647E-4282-8384-4AB1AE31A452} = {41E34993-647E-4282-8384-4AB1AE31A452}
 		{98A51BA8-FC3A-415B-AC8F-8C7BD464E93E} = {98A51BA8-FC3A-415B-AC8F-8C7BD464E93E}
@@ -19,6 +20,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libsimulator", "..\..\cocos2d-x\tools\simulator\libsimulator\proj.win32\libsimulator.vcxproj", "{001B324A-BB91-4E83-875C-C92F75C40857}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "librecast", "..\..\cocos2d-x\external\recast\proj.win32\librecast.vcxproj", "{41E34993-647E-4282-8384-4AB1AE31A452}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libfairygui", "..\..\cocos2d-x\extensions\libfairygui\proj.win32\libfairygui.vcxproj", "{187D3E60-961A-41EE-BC18-C510A431D22E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -64,6 +67,12 @@ Global
 		{41E34993-647E-4282-8384-4AB1AE31A452}.Release|Win32.ActiveCfg = Release|Win32
 		{41E34993-647E-4282-8384-4AB1AE31A452}.Release|Win32.Build.0 = Release|Win32
 		{41E34993-647E-4282-8384-4AB1AE31A452}.Release|x64.ActiveCfg = Release|Win32
+		{187D3E60-961A-41EE-BC18-C510A431D22E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{187D3E60-961A-41EE-BC18-C510A431D22E}.Debug|Win32.Build.0 = Debug|Win32
+		{187D3E60-961A-41EE-BC18-C510A431D22E}.Debug|x64.ActiveCfg = Debug|Win32
+		{187D3E60-961A-41EE-BC18-C510A431D22E}.Release|Win32.ActiveCfg = Release|Win32
+		{187D3E60-961A-41EE-BC18-C510A431D22E}.Release|Win32.Build.0 = Release|Win32
+		{187D3E60-961A-41EE-BC18-C510A431D22E}.Release|x64.ActiveCfg = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

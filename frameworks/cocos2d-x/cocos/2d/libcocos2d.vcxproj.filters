@@ -292,6 +292,9 @@
     <Filter Include="extension\ImGuiEXT\imgui\cpp">
       <UniqueIdentifier>{8d38c0a6-5215-408a-b79e-067d16fa4c31}</UniqueIdentifier>
     </Filter>
+    <Filter Include="extension\NewFilter1">
+      <UniqueIdentifier>{0ec680c6-2a2c-41ee-823f-dc6453d0d016}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\physics\CCPhysicsBody.cpp">

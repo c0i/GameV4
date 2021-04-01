@@ -59,6 +59,10 @@ set(GAME_HEADER ${RUNTIME_SRC_ROOT}/Classes/AppDelegate.h)
 set(GAME_SOURCE ${RUNTIME_SRC_ROOT}/Classes/AppDelegate.cpp)
 # sources need to compile info, include dirs and source files
 
+# file list
+file(GLOB_RECURSE FAIRYGUI_TEST_SRC ${RUNTIME_SRC_ROOT}/Classes/test/fgui/*.cpp)
+list(APPEND GAME_SOURCE ${FAIRYGUI_TEST_SRC})
+
 if(ANDROID)
     # change APP_NAME to the share library name for Android, it's value depend on AndroidManifest.xml
     set(APP_NAME cocos2dlua)
@@ -119,7 +123,13 @@ else()
     target_link_libraries(${APP_NAME} -Wl,--whole-archive cpp_android_spec -Wl,--no-whole-archive)
     add_subdirectory(${COCOS2DX_ROOT_PATH}/cocos/scripting/lua-bindings/proj.android ${ENGINE_BINARY_PATH}/cocos/lua-android)
     target_link_libraries(${APP_NAME} -Wl,--whole-archive lua_android_spec -Wl,--no-whole-archive)
+
+
 endif()
+
+# FairyGui
+add_subdirectory(${COCOS2DX_ROOT_PATH}/extensions/libfairygui)
+target_link_libraries(${APP_NAME} fairygui)
 
 target_link_libraries(${APP_NAME} luacocos2d)
 target_include_directories(${APP_NAME} PRIVATE ${RUNTIME_SRC_ROOT}/Classes)
