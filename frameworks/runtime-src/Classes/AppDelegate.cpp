@@ -33,6 +33,31 @@
 #include "audio/include/AudioEngine.h"
 #endif
 
+#define APP_CPP_TEST 1
+
+#ifdef CC_PLATFORM_PC
+#define CC_USE_IMGUI 1
+#endif 
+
+#if APP_CPP_TEST
+#include "test/fgui/MenuScene.h"
+
+#if CC_USE_IMGUI > 0
+#include "test/ImGuiScene.h"
+#endif
+
+#endif
+
+#if CC_USE_IMGUI > 0
+
+#define SOL_ALL_SAFETIES_ON 1
+#include <sol/sol.hpp>
+#include <vector>
+#include "sol_ImGui.h"
+
+#endif
+
+
 USING_NS_CC;
 using namespace std;
 
@@ -65,23 +90,39 @@ void AppDelegate::initGLContextAttrs()
 
 // if you want to use the package manager to install more packages, 
 // don't modify or remove this function
-static int register_all_packages()
+static int register_all_packages(lua_State* L)
 {
+#if CC_USE_IMGUI > 0
+    sol::state_view lua(L);
+    sol_ImGui::Init(lua);
+
+    lua["ImGui"]["draw"] = []() {
+        //printf("imgui draw\n");
+    };
+    ImGuiEXT::getInstance()->addRenderLoop("#im01", [=]() {
+        lua["ImGui"]["draw"]();
+    }, nullptr);
+#endif // CC_USE_IMGUI
+
+
+
     return 0; //flag for packages manager
 }
 
 bool AppDelegate::applicationDidFinishLaunching()
 {
     // set default FPS
-    Director::getInstance()->setAnimationInterval(1.0 / 60.0f);
-
+    auto director = Director::getInstance();
+    director->setAnimationInterval(1.0 / 60.0f);
+    director->setDisplayStats(true);
+    
     // register lua module
     auto engine = LuaEngine::getInstance();
     ScriptEngineManager::getInstance()->setScriptEngine(engine);
     lua_State* L = engine->getLuaStack()->getLuaState();
     lua_module_register(L);
 
-    register_all_packages();
+    register_all_packages(L);
 
     LuaStack* stack = engine->getLuaStack();
     stack->setXXTEAKeyAndSign("2dxLua", strlen("2dxLua"), "XXTEA", strlen("XXTEA"));
@@ -89,12 +130,20 @@ bool AppDelegate::applicationDidFinishLaunching()
     //register custom function
     //LuaStack* stack = engine->getLuaStack();
     //register_custom_function(stack->getLuaState());
-    
-#if CC_64BITS
-    FileUtils::getInstance()->addSearchPath("src/64bit");
-#endif
+
+
     FileUtils::getInstance()->addSearchPath("src");
     FileUtils::getInstance()->addSearchPath("res");
+
+#if APP_CPP_TEST
+
+    //director->runWithScene(ImGuiScene::create());
+
+    director->getOpenGLView()->setDesignResolutionSize(1136, 640, ResolutionPolicy::FIXED_HEIGHT);
+    director->runWithScene(MenuScene::create());
+    return true;
+#endif
+
     if (engine->executeScriptFile("main.lua"))
     {
         return false;

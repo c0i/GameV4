@@ -283,6 +283,18 @@
     <Filter Include="ui\UIWidgets\UIWebView">
       <UniqueIdentifier>{2157d0f3-e814-4ff7-91fd-202dffb55ccb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="extension\ImGuiEXT">
+      <UniqueIdentifier>{017f8d63-b2b7-455b-b328-09cf75c8d968}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="extension\ImGuiEXT\imgui">
+      <UniqueIdentifier>{3b784943-9476-454a-84de-ac507610e6da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="extension\ImGuiEXT\imgui\cpp">
+      <UniqueIdentifier>{8d38c0a6-5215-408a-b79e-067d16fa4c31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="extension\NewFilter1">
+      <UniqueIdentifier>{0ec680c6-2a2c-41ee-823f-dc6453d0d016}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\physics\CCPhysicsBody.cpp">
@@ -1928,6 +1940,27 @@
     </ClCompile>
     <ClCompile Include="..\3d\CC3DProgramInfo.cpp">
       <Filter>3d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extensions\ImGuiEXT\CCImGuiEXT.cpp">
+      <Filter>extension\ImGuiEXT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extensions\ImGuiEXT\imgui_impl_cocos2dx.cpp">
+      <Filter>extension\ImGuiEXT</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extensions\ImGuiEXT\imgui\imgui.cpp">
+      <Filter>extension\ImGuiEXT\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extensions\ImGuiEXT\imgui\imgui_draw.cpp">
+      <Filter>extension\ImGuiEXT\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extensions\ImGuiEXT\imgui\imgui_widgets.cpp">
+      <Filter>extension\ImGuiEXT\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extensions\ImGuiEXT\imgui\misc\cpp\imgui_stdlib.cpp">
+      <Filter>extension\ImGuiEXT\imgui\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\extensions\ImGuiEXT\imgui\imgui_demo.cpp">
+      <Filter>extension\ImGuiEXT\imgui</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -3756,6 +3789,33 @@
     </ClInclude>
     <ClInclude Include="..\3d\CC3DProgramInfo.h">
       <Filter>3d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extensions\ImGuiEXT\CCImGuiEXT.h">
+      <Filter>extension\ImGuiEXT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extensions\ImGuiEXT\imgui_impl_cocos2dx.h">
+      <Filter>extension\ImGuiEXT</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extensions\ImGuiEXT\imgui\imconfig.h">
+      <Filter>extension\ImGuiEXT\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extensions\ImGuiEXT\imgui\imgui.h">
+      <Filter>extension\ImGuiEXT\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extensions\ImGuiEXT\imgui\imgui_internal.h">
+      <Filter>extension\ImGuiEXT\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extensions\ImGuiEXT\imgui\imstb_rectpack.h">
+      <Filter>extension\ImGuiEXT\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extensions\ImGuiEXT\imgui\imstb_textedit.h">
+      <Filter>extension\ImGuiEXT\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extensions\ImGuiEXT\imgui\imstb_truetype.h">
+      <Filter>extension\ImGuiEXT\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\extensions\ImGuiEXT\imgui\misc\cpp\imgui_stdlib.h">
+      <Filter>extension\ImGuiEXT\imgui\cpp</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

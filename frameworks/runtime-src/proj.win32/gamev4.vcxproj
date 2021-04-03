@@ -13,6 +13,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{4E6A7A0E-DDD8-4BAA-8B22-C964069364ED}</ProjectGuid>
     <ProjectName>gamev4</ProjectName>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -74,7 +75,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>$(ProjectDir)..\Classes;$(ProjectDir)..\Classes\runtime;$(ProjectDir)..\Classes\protobuf-lite;$(EngineRoot)external\win32-specific\zlib\include;$(EngineRoot)external;$(EngineRoot)external\lua\lua;$(EngineRoot)external\lua\luajit\include;$(EngineRoot)external\lua\tolua;$(EngineRoot)external\chipmunk\include\chipmunk;$(EngineRoot)external\curl\include\win32;$(EngineRoot)extensions;$(EngineRoot)tools\simulator\libsimulator\lib;$(EngineRoot)tools\simulator\libsimulator\lib\protobuf-lite;$(EngineRoot);%(AdditionalIncludeDirectories);$(_COCOS_HEADER_WIN32_BEGIN);$(_COCOS_HEADER_WIN32_END)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)..\Classes;$(ProjectDir)..\Classes\runtime;$(ProjectDir)..\Classes\protobuf-lite;$(EngineRoot)external\win32-specific\zlib\include;$(EngineRoot)external;$(EngineRoot)external\lua\lua;$(EngineRoot)external\lua\luajit\include;$(EngineRoot)external\lua\tolua;$(EngineRoot)external\chipmunk\include\chipmunk;$(EngineRoot)external\curl\include\win32;$(EngineRoot)extensions\;$(EngineRoot)extensions\libfairygui\Classes;$(EngineRoot)tools\simulator\libsimulator\lib;$(EngineRoot)tools\simulator\libsimulator\lib\protobuf-lite;$(EngineRoot);%(AdditionalIncludeDirectories);$(_COCOS_HEADER_WIN32_BEGIN);$(_COCOS_HEADER_WIN32_END)</AdditionalIncludeDirectories>
       <PrecompiledHeader>
       </PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
@@ -93,7 +94,7 @@
       <TargetMachine>MachineX86</TargetMachine>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories);$(_COCOS_LIB_PATH_WIN32_BEGIN);$(_COCOS_LIB_PATH_WIN32_END)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>libcurl.lib;%(AdditionalDependencies);$(_COCOS_LIB_WIN32_BEGIN);$(_COCOS_LIB_WIN32_END)</AdditionalDependencies>
+      <AdditionalDependencies>libcurl.lib;libfairygui.lib;%(AdditionalDependencies);$(_COCOS_LIB_WIN32_BEGIN);$(_COCOS_LIB_WIN32_END)</AdditionalDependencies>
       <IgnoreSpecificDefaultLibraries>libcmt.lib</IgnoreSpecificDefaultLibraries>
       <ProgramDatabaseFile>$(ProjectDir)../../../simulator/win32/$(TargetName).pdb</ProgramDatabaseFile>
       <OutputFile>$(ProjectDir)../../../simulator/win32/$(TargetName)$(TargetExt)</OutputFile>
@@ -137,6 +138,9 @@ xcopy "$(ProjectDir)..\..\..\src" "$(LocalDebuggerWorkingDirectory)\Resources\sr
       <Outputs>$(TargetName).cab</Outputs>
       <Inputs>$(TargetFileName)</Inputs>
     </CustomBuildStep>
+    <ClCompile>
+      <LanguageStandard Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">stdcpp17</LanguageStandard>
+    </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -196,6 +200,30 @@ xcopy "$(ProjectDir)..\..\..\src" "$(LocalDebuggerWorkingDirectory)\Resources\sr
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="..\Classes\AppDelegate.h" />
+    <ClInclude Include="..\Classes\test\fgui\BagScene.h" />
+    <ClInclude Include="..\Classes\test\fgui\BagWindow.h" />
+    <ClInclude Include="..\Classes\test\fgui\BasicsScene.h" />
+    <ClInclude Include="..\Classes\test\fgui\ChatScene.h" />
+    <ClInclude Include="..\Classes\test\fgui\CooldownScene.h" />
+    <ClInclude Include="..\Classes\test\fgui\DemoScene.h" />
+    <ClInclude Include="..\Classes\test\fgui\EmojiParser.h" />
+    <ClInclude Include="..\Classes\test\fgui\GuideScene.h" />
+    <ClInclude Include="..\Classes\test\fgui\HitTestScene.h" />
+    <ClInclude Include="..\Classes\test\fgui\JoystickModule.h" />
+    <ClInclude Include="..\Classes\test\fgui\JoystickScene.h" />
+    <ClInclude Include="..\Classes\test\fgui\ListEffectScene.h" />
+    <ClInclude Include="..\Classes\test\fgui\LoopListScene.h" />
+    <ClInclude Include="..\Classes\test\fgui\MailItem.h" />
+    <ClInclude Include="..\Classes\test\fgui\MenuScene.h" />
+    <ClInclude Include="..\Classes\test\fgui\ModalWaitingScene.h" />
+    <ClInclude Include="..\Classes\test\fgui\PullToRefreshScene.h" />
+    <ClInclude Include="..\Classes\test\fgui\ScrollPaneScene.h" />
+    <ClInclude Include="..\Classes\test\fgui\TransitionDemoScene.h" />
+    <ClInclude Include="..\Classes\test\fgui\TreeViewScene.h" />
+    <ClInclude Include="..\Classes\test\fgui\VirtualListScene.h" />
+    <ClInclude Include="..\Classes\test\fgui\Window1.h" />
+    <ClInclude Include="..\Classes\test\fgui\Window2.h" />
+    <ClInclude Include="..\Classes\test\ImGuiScene.h" />
     <ClInclude Include="main.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="SimulatorWin.h" />
@@ -204,6 +232,30 @@ xcopy "$(ProjectDir)..\..\..\src" "$(LocalDebuggerWorkingDirectory)\Resources\sr
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Classes\AppDelegate.cpp" />
+    <ClCompile Include="..\Classes\test\fgui\BagScene.cpp" />
+    <ClCompile Include="..\Classes\test\fgui\BagWindow.cpp" />
+    <ClCompile Include="..\Classes\test\fgui\BasicsScene.cpp" />
+    <ClCompile Include="..\Classes\test\fgui\ChatScene.cpp" />
+    <ClCompile Include="..\Classes\test\fgui\CooldownScene.cpp" />
+    <ClCompile Include="..\Classes\test\fgui\DemoScene.cpp" />
+    <ClCompile Include="..\Classes\test\fgui\EmojiParser.cpp" />
+    <ClCompile Include="..\Classes\test\fgui\GuideScene.cpp" />
+    <ClCompile Include="..\Classes\test\fgui\HitTestScene.cpp" />
+    <ClCompile Include="..\Classes\test\fgui\JoystickModule.cpp" />
+    <ClCompile Include="..\Classes\test\fgui\JoystickScene.cpp" />
+    <ClCompile Include="..\Classes\test\fgui\ListEffectScene.cpp" />
+    <ClCompile Include="..\Classes\test\fgui\LoopListScene.cpp" />
+    <ClCompile Include="..\Classes\test\fgui\MailItem.cpp" />
+    <ClCompile Include="..\Classes\test\fgui\MenuScene.cpp" />
+    <ClCompile Include="..\Classes\test\fgui\ModalWaitingScene.cpp" />
+    <ClCompile Include="..\Classes\test\fgui\PullToRefreshScene.cpp" />
+    <ClCompile Include="..\Classes\test\fgui\ScrollPaneScene.cpp" />
+    <ClCompile Include="..\Classes\test\fgui\TransitionDemoScene.cpp" />
+    <ClCompile Include="..\Classes\test\fgui\TreeViewScene.cpp" />
+    <ClCompile Include="..\Classes\test\fgui\VirtualListScene.cpp" />
+    <ClCompile Include="..\Classes\test\fgui\Window1.cpp" />
+    <ClCompile Include="..\Classes\test\fgui\Window2.cpp" />
+    <ClCompile Include="..\Classes\test\ImGuiScene.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="SimulatorWin.cpp" />
     <ClCompile Include="stdafx.cpp" />

@@ -48,7 +48,56 @@
 		50D7C96E17EBBEE6005D0B91 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50D7C96D17EBBEE6005D0B91 /* AppKit.framework */; };
 		50D7C97017EBBEEC005D0B91 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50D7C96F17EBBEEC005D0B91 /* IOKit.framework */; };
 		5200BECA1A53D9A500AC45E4 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5200BEC91A53D9A500AC45E4 /* Security.framework */; };
+		840E4618260ADA740091E812 /* ImGuiScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 840E4614260ADA740091E812 /* ImGuiScene.cpp */; };
 		846817862603D521006E9556 /* SimulatorLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 846817852603D521006E9556 /* SimulatorLog.m */; };
+		84C89B02261641ED00EAA133 /* Window1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C89AD5261641ED00EAA133 /* Window1.cpp */; };
+		84C89B03261641ED00EAA133 /* Window1.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C89AD5261641ED00EAA133 /* Window1.cpp */; };
+		84C89B04261641ED00EAA133 /* PullToRefreshScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C89AD6261641ED00EAA133 /* PullToRefreshScene.cpp */; };
+		84C89B05261641ED00EAA133 /* PullToRefreshScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C89AD6261641ED00EAA133 /* PullToRefreshScene.cpp */; };
+		84C89B06261641ED00EAA133 /* Window2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C89AD7261641ED00EAA133 /* Window2.cpp */; };
+		84C89B07261641ED00EAA133 /* Window2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C89AD7261641ED00EAA133 /* Window2.cpp */; };
+		84C89B08261641ED00EAA133 /* ChatScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C89AD9261641ED00EAA133 /* ChatScene.cpp */; };
+		84C89B09261641ED00EAA133 /* ChatScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C89AD9261641ED00EAA133 /* ChatScene.cpp */; };
+		84C89B0A261641ED00EAA133 /* TreeViewScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C89ADA261641ED00EAA133 /* TreeViewScene.cpp */; };
+		84C89B0B261641ED00EAA133 /* TreeViewScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C89ADA261641ED00EAA133 /* TreeViewScene.cpp */; };
+		84C89B0C261641ED00EAA133 /* EmojiParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C89ADC261641ED00EAA133 /* EmojiParser.cpp */; };
+		84C89B0D261641ED00EAA133 /* EmojiParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C89ADC261641ED00EAA133 /* EmojiParser.cpp */; };
+		84C89B0E261641ED00EAA133 /* DemoScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C89ADF261641ED00EAA133 /* DemoScene.cpp */; };
+		84C89B0F261641ED00EAA133 /* DemoScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C89ADF261641ED00EAA133 /* DemoScene.cpp */; };
+		84C89B10261641ED00EAA133 /* TransitionDemoScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C89AE2261641ED00EAA133 /* TransitionDemoScene.cpp */; };
+		84C89B11261641ED00EAA133 /* TransitionDemoScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C89AE2261641ED00EAA133 /* TransitionDemoScene.cpp */; };
+		84C89B12261641ED00EAA133 /* MailItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C89AE3261641ED00EAA133 /* MailItem.cpp */; };
+		84C89B13261641ED00EAA133 /* MailItem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C89AE3261641ED00EAA133 /* MailItem.cpp */; };
+		84C89B14261641ED00EAA133 /* LoopListScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C89AE5261641ED00EAA133 /* LoopListScene.cpp */; };
+		84C89B15261641ED00EAA133 /* LoopListScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C89AE5261641ED00EAA133 /* LoopListScene.cpp */; };
+		84C89B16261641ED00EAA133 /* ScrollPaneScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C89AE7261641ED00EAA133 /* ScrollPaneScene.cpp */; };
+		84C89B17261641ED00EAA133 /* ScrollPaneScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C89AE7261641ED00EAA133 /* ScrollPaneScene.cpp */; };
+		84C89B18261641ED00EAA133 /* GuideScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C89AEA261641ED00EAA133 /* GuideScene.cpp */; };
+		84C89B19261641ED00EAA133 /* GuideScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C89AEA261641ED00EAA133 /* GuideScene.cpp */; };
+		84C89B1A261641ED00EAA133 /* MenuScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C89AEB261641ED00EAA133 /* MenuScene.cpp */; };
+		84C89B1B261641ED00EAA133 /* MenuScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C89AEB261641ED00EAA133 /* MenuScene.cpp */; };
+		84C89B1C261641ED00EAA133 /* ModalWaitingScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C89AEC261641ED00EAA133 /* ModalWaitingScene.cpp */; };
+		84C89B1D261641ED00EAA133 /* ModalWaitingScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C89AEC261641ED00EAA133 /* ModalWaitingScene.cpp */; };
+		84C89B1E261641ED00EAA133 /* CooldownScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C89AF1261641ED00EAA133 /* CooldownScene.cpp */; };
+		84C89B1F261641ED00EAA133 /* CooldownScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C89AF1261641ED00EAA133 /* CooldownScene.cpp */; };
+		84C89B20261641ED00EAA133 /* BasicsScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C89AF2261641ED00EAA133 /* BasicsScene.cpp */; };
+		84C89B21261641ED00EAA133 /* BasicsScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C89AF2261641ED00EAA133 /* BasicsScene.cpp */; };
+		84C89B22261641ED00EAA133 /* BagScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C89AF5261641ED00EAA133 /* BagScene.cpp */; };
+		84C89B23261641ED00EAA133 /* BagScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C89AF5261641ED00EAA133 /* BagScene.cpp */; };
+		84C89B24261641ED00EAA133 /* BagWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C89AF7261641ED00EAA133 /* BagWindow.cpp */; };
+		84C89B25261641ED00EAA133 /* BagWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C89AF7261641ED00EAA133 /* BagWindow.cpp */; };
+		84C89B26261641ED00EAA133 /* JoystickScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C89AF8261641ED00EAA133 /* JoystickScene.cpp */; };
+		84C89B27261641ED00EAA133 /* JoystickScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C89AF8261641ED00EAA133 /* JoystickScene.cpp */; };
+		84C89B28261641ED00EAA133 /* HitTestScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C89AF9261641ED00EAA133 /* HitTestScene.cpp */; };
+		84C89B29261641ED00EAA133 /* HitTestScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C89AF9261641ED00EAA133 /* HitTestScene.cpp */; };
+		84C89B2A261641ED00EAA133 /* JoystickModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C89AFA261641ED00EAA133 /* JoystickModule.cpp */; };
+		84C89B2B261641ED00EAA133 /* JoystickModule.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C89AFA261641ED00EAA133 /* JoystickModule.cpp */; };
+		84C89B2C261641ED00EAA133 /* VirtualListScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C89AFE261641ED00EAA133 /* VirtualListScene.cpp */; };
+		84C89B2D261641ED00EAA133 /* VirtualListScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C89AFE261641ED00EAA133 /* VirtualListScene.cpp */; };
+		84C89B2E261641ED00EAA133 /* ListEffectScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C89B01261641ED00EAA133 /* ListEffectScene.cpp */; };
+		84C89B2F261641ED00EAA133 /* ListEffectScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C89B01261641ED00EAA133 /* ListEffectScene.cpp */; };
+		84C89B322616426600EAA133 /* libfairygui Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C89ABE26163FB800EAA133 /* libfairygui Mac.a */; };
+		84C89B582616450800EAA133 /* libfairygui iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C89ABC26163FB800EAA133 /* libfairygui iOS.a */; };
 		84EBB98726012A5800E8DFB7 /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A8A4ED61F6F9AE70044495E /* config.json */; };
 		9FA3AE4E1BE9BCC900FC9645 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FA3AE4D1BE9BCC900FC9645 /* CFNetwork.framework */; };
 		9FF504841A5E87B100AFDA55 /* ConsoleWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FF504811A5E87B100AFDA55 /* ConsoleWindow.xib */; };
@@ -134,6 +183,34 @@
 			remoteGlobalIDString = 507B43531C31FA0C0067B53E;
 			remoteInfo = "libluacocos2d tvOS";
 		};
+		84C89ABB26163FB800EAA133 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84C89AB426163FB800EAA133 /* fairygui.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 445402201FB3E8D500869375;
+			remoteInfo = "libfairygui iOS";
+		};
+		84C89ABD26163FB800EAA133 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84C89AB426163FB800EAA133 /* fairygui.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 445402F81FB3EFFA00869375;
+			remoteInfo = "libfairygui Mac";
+		};
+		84C89AC326163FCB00EAA133 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84C89AB426163FB800EAA133 /* fairygui.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 445402F71FB3EFFA00869375;
+			remoteInfo = "libfairygui Mac";
+		};
+		84C89B56261644FE00EAA133 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84C89AB426163FB800EAA133 /* fairygui.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 4454021F1FB3E8D500869375;
+			remoteInfo = "libfairygui iOS";
+		};
 		9FEE0E431A5FC95000FEA1B0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9FF504781A5E86D600AFDA55 /* libsimulator.xcodeproj */;
@@ -217,8 +294,57 @@
 		50D7C96D17EBBEE6005D0B91 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		50D7C96F17EBBEEC005D0B91 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		5200BEC91A53D9A500AC45E4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		840E4614260ADA740091E812 /* ImGuiScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ImGuiScene.cpp; sourceTree = "<group>"; };
+		840E4615260ADA740091E812 /* ImGuiScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImGuiScene.h; sourceTree = "<group>"; };
 		846817852603D521006E9556 /* SimulatorLog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimulatorLog.m; sourceTree = "<group>"; };
 		8468178B2603D549006E9556 /* SimulatorLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimulatorLog.h; sourceTree = "<group>"; };
+		84C89AB426163FB800EAA133 /* fairygui.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = fairygui.xcodeproj; path = "../../cocos2d-x/extensions/libfairygui/proj.ios_mac/fairygui.xcodeproj"; sourceTree = "<group>"; };
+		84C89AD4261641ED00EAA133 /* BasicsScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BasicsScene.h; sourceTree = "<group>"; };
+		84C89AD5261641ED00EAA133 /* Window1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Window1.cpp; sourceTree = "<group>"; };
+		84C89AD6261641ED00EAA133 /* PullToRefreshScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PullToRefreshScene.cpp; sourceTree = "<group>"; };
+		84C89AD7261641ED00EAA133 /* Window2.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Window2.cpp; sourceTree = "<group>"; };
+		84C89AD8261641ED00EAA133 /* ChatScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatScene.h; sourceTree = "<group>"; };
+		84C89AD9261641ED00EAA133 /* ChatScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ChatScene.cpp; sourceTree = "<group>"; };
+		84C89ADA261641ED00EAA133 /* TreeViewScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TreeViewScene.cpp; sourceTree = "<group>"; };
+		84C89ADB261641ED00EAA133 /* Window2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Window2.h; sourceTree = "<group>"; };
+		84C89ADC261641ED00EAA133 /* EmojiParser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = EmojiParser.cpp; sourceTree = "<group>"; };
+		84C89ADD261641ED00EAA133 /* EmojiParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmojiParser.h; sourceTree = "<group>"; };
+		84C89ADE261641ED00EAA133 /* VirtualListScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VirtualListScene.h; sourceTree = "<group>"; };
+		84C89ADF261641ED00EAA133 /* DemoScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DemoScene.cpp; sourceTree = "<group>"; };
+		84C89AE0261641ED00EAA133 /* PullToRefreshScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PullToRefreshScene.h; sourceTree = "<group>"; };
+		84C89AE1261641ED00EAA133 /* DemoScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoScene.h; sourceTree = "<group>"; };
+		84C89AE2261641ED00EAA133 /* TransitionDemoScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TransitionDemoScene.cpp; sourceTree = "<group>"; };
+		84C89AE3261641ED00EAA133 /* MailItem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MailItem.cpp; sourceTree = "<group>"; };
+		84C89AE4261641ED00EAA133 /* CooldownScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CooldownScene.h; sourceTree = "<group>"; };
+		84C89AE5261641ED00EAA133 /* LoopListScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LoopListScene.cpp; sourceTree = "<group>"; };
+		84C89AE6261641ED00EAA133 /* ListEffectScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListEffectScene.h; sourceTree = "<group>"; };
+		84C89AE7261641ED00EAA133 /* ScrollPaneScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ScrollPaneScene.cpp; sourceTree = "<group>"; };
+		84C89AE8261641ED00EAA133 /* Window1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Window1.h; sourceTree = "<group>"; };
+		84C89AE9261641ED00EAA133 /* GuideScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GuideScene.h; sourceTree = "<group>"; };
+		84C89AEA261641ED00EAA133 /* GuideScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GuideScene.cpp; sourceTree = "<group>"; };
+		84C89AEB261641ED00EAA133 /* MenuScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MenuScene.cpp; sourceTree = "<group>"; };
+		84C89AEC261641ED00EAA133 /* ModalWaitingScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ModalWaitingScene.cpp; sourceTree = "<group>"; };
+		84C89AED261641ED00EAA133 /* HitTestScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HitTestScene.h; sourceTree = "<group>"; };
+		84C89AEE261641ED00EAA133 /* TreeViewScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeViewScene.h; sourceTree = "<group>"; };
+		84C89AEF261641ED00EAA133 /* MenuScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuScene.h; sourceTree = "<group>"; };
+		84C89AF0261641ED00EAA133 /* BagWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BagWindow.h; sourceTree = "<group>"; };
+		84C89AF1261641ED00EAA133 /* CooldownScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CooldownScene.cpp; sourceTree = "<group>"; };
+		84C89AF2261641ED00EAA133 /* BasicsScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BasicsScene.cpp; sourceTree = "<group>"; };
+		84C89AF3261641ED00EAA133 /* BagScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BagScene.h; sourceTree = "<group>"; };
+		84C89AF4261641ED00EAA133 /* ScrollPaneScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollPaneScene.h; sourceTree = "<group>"; };
+		84C89AF5261641ED00EAA133 /* BagScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BagScene.cpp; sourceTree = "<group>"; };
+		84C89AF6261641ED00EAA133 /* ModalWaitingScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalWaitingScene.h; sourceTree = "<group>"; };
+		84C89AF7261641ED00EAA133 /* BagWindow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BagWindow.cpp; sourceTree = "<group>"; };
+		84C89AF8261641ED00EAA133 /* JoystickScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = JoystickScene.cpp; sourceTree = "<group>"; };
+		84C89AF9261641ED00EAA133 /* HitTestScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HitTestScene.cpp; sourceTree = "<group>"; };
+		84C89AFA261641ED00EAA133 /* JoystickModule.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = JoystickModule.cpp; sourceTree = "<group>"; };
+		84C89AFB261641ED00EAA133 /* TransitionDemoScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionDemoScene.h; sourceTree = "<group>"; };
+		84C89AFC261641ED00EAA133 /* JoystickModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JoystickModule.h; sourceTree = "<group>"; };
+		84C89AFD261641ED00EAA133 /* JoystickScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JoystickScene.h; sourceTree = "<group>"; };
+		84C89AFE261641ED00EAA133 /* VirtualListScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VirtualListScene.cpp; sourceTree = "<group>"; };
+		84C89AFF261641ED00EAA133 /* MailItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MailItem.h; sourceTree = "<group>"; };
+		84C89B00261641ED00EAA133 /* LoopListScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoopListScene.h; sourceTree = "<group>"; };
+		84C89B01261641ED00EAA133 /* ListEffectScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ListEffectScene.cpp; sourceTree = "<group>"; };
 		9FA3AE4D1BE9BCC900FC9645 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
 		9FF504781A5E86D600AFDA55 /* libsimulator.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libsimulator.xcodeproj; path = "../../cocos2d-x/tools/simulator/libsimulator/proj.ios_mac/libsimulator.xcodeproj"; sourceTree = "<group>"; };
 		9FF504811A5E87B100AFDA55 /* ConsoleWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConsoleWindow.xib; sourceTree = "<group>"; };
@@ -248,6 +374,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84C89B322616426600EAA133 /* libfairygui Mac.a in Frameworks */,
 				3866FB4C23646458009CC05A /* MetalKit.framework in Frameworks */,
 				3866FB08236447B8009CC05A /* libmesa.a in Frameworks */,
 				3866FB09236447B8009CC05A /* libglcpp-library.a in Frameworks */,
@@ -275,6 +402,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84C89B582616450800EAA133 /* libfairygui iOS.a in Frameworks */,
 				38F7C28D238BEF950079848C /* AVKit.framework in Frameworks */,
 				38F7C285238BEDBA0079848C /* WebKit.framework in Frameworks */,
 				38F7C281238BED5A0079848C /* Metal.framework in Frameworks */,
@@ -361,6 +489,79 @@
 			path = mac;
 			sourceTree = "<group>";
 		};
+		840E4613260ADA740091E812 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				84C89AD3261641ED00EAA133 /* fgui */,
+				840E4614260ADA740091E812 /* ImGuiScene.cpp */,
+				840E4615260ADA740091E812 /* ImGuiScene.h */,
+			);
+			name = test;
+			path = ../Classes/test;
+			sourceTree = "<group>";
+		};
+		84C89AB526163FB800EAA133 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84C89ABC26163FB800EAA133 /* libfairygui iOS.a */,
+				84C89ABE26163FB800EAA133 /* libfairygui Mac.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		84C89AD3261641ED00EAA133 /* fgui */ = {
+			isa = PBXGroup;
+			children = (
+				84C89AD4261641ED00EAA133 /* BasicsScene.h */,
+				84C89AD5261641ED00EAA133 /* Window1.cpp */,
+				84C89AD6261641ED00EAA133 /* PullToRefreshScene.cpp */,
+				84C89AD7261641ED00EAA133 /* Window2.cpp */,
+				84C89AD8261641ED00EAA133 /* ChatScene.h */,
+				84C89AD9261641ED00EAA133 /* ChatScene.cpp */,
+				84C89ADA261641ED00EAA133 /* TreeViewScene.cpp */,
+				84C89ADB261641ED00EAA133 /* Window2.h */,
+				84C89ADC261641ED00EAA133 /* EmojiParser.cpp */,
+				84C89ADD261641ED00EAA133 /* EmojiParser.h */,
+				84C89ADE261641ED00EAA133 /* VirtualListScene.h */,
+				84C89ADF261641ED00EAA133 /* DemoScene.cpp */,
+				84C89AE0261641ED00EAA133 /* PullToRefreshScene.h */,
+				84C89AE1261641ED00EAA133 /* DemoScene.h */,
+				84C89AE2261641ED00EAA133 /* TransitionDemoScene.cpp */,
+				84C89AE3261641ED00EAA133 /* MailItem.cpp */,
+				84C89AE4261641ED00EAA133 /* CooldownScene.h */,
+				84C89AE5261641ED00EAA133 /* LoopListScene.cpp */,
+				84C89AE6261641ED00EAA133 /* ListEffectScene.h */,
+				84C89AE7261641ED00EAA133 /* ScrollPaneScene.cpp */,
+				84C89AE8261641ED00EAA133 /* Window1.h */,
+				84C89AE9261641ED00EAA133 /* GuideScene.h */,
+				84C89AEA261641ED00EAA133 /* GuideScene.cpp */,
+				84C89AEB261641ED00EAA133 /* MenuScene.cpp */,
+				84C89AEC261641ED00EAA133 /* ModalWaitingScene.cpp */,
+				84C89AED261641ED00EAA133 /* HitTestScene.h */,
+				84C89AEE261641ED00EAA133 /* TreeViewScene.h */,
+				84C89AEF261641ED00EAA133 /* MenuScene.h */,
+				84C89AF0261641ED00EAA133 /* BagWindow.h */,
+				84C89AF1261641ED00EAA133 /* CooldownScene.cpp */,
+				84C89AF2261641ED00EAA133 /* BasicsScene.cpp */,
+				84C89AF3261641ED00EAA133 /* BagScene.h */,
+				84C89AF4261641ED00EAA133 /* ScrollPaneScene.h */,
+				84C89AF5261641ED00EAA133 /* BagScene.cpp */,
+				84C89AF6261641ED00EAA133 /* ModalWaitingScene.h */,
+				84C89AF7261641ED00EAA133 /* BagWindow.cpp */,
+				84C89AF8261641ED00EAA133 /* JoystickScene.cpp */,
+				84C89AF9261641ED00EAA133 /* HitTestScene.cpp */,
+				84C89AFA261641ED00EAA133 /* JoystickModule.cpp */,
+				84C89AFB261641ED00EAA133 /* TransitionDemoScene.h */,
+				84C89AFC261641ED00EAA133 /* JoystickModule.h */,
+				84C89AFD261641ED00EAA133 /* JoystickScene.h */,
+				84C89AFE261641ED00EAA133 /* VirtualListScene.cpp */,
+				84C89AFF261641ED00EAA133 /* MailItem.h */,
+				84C89B00261641ED00EAA133 /* LoopListScene.h */,
+				84C89B01261641ED00EAA133 /* ListEffectScene.cpp */,
+			);
+			path = fgui;
+			sourceTree = "<group>";
+		};
 		9FF504791A5E86D600AFDA55 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -383,6 +584,7 @@
 		F293B3BD15EB7BE500256477 = {
 			isa = PBXGroup;
 			children = (
+				84C89AB426163FB800EAA133 /* fairygui.xcodeproj */,
 				15A8A4031834BDA200142BE0 /* cocos2d_libs.xcodeproj */,
 				C03781AE18BF654500FE4F13 /* cocos2d_lua_bindings.xcodeproj */,
 				9FF504781A5E86D600AFDA55 /* libsimulator.xcodeproj */,
@@ -449,6 +651,7 @@
 		F293BB7C15EB830F00256477 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				840E4613260ADA740091E812 /* test */,
 				F293BB7E15EB831F00256477 /* AppDelegate.cpp */,
 				F293BB7F15EB831F00256477 /* AppDelegate.h */,
 			);
@@ -469,8 +672,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				84C89AC426163FCB00EAA133 /* PBXTargetDependency */,
 				9FEE0E441A5FC95000FEA1B0 /* PBXTargetDependency */,
-				9FF505C11A5F0F0900AFDA55 /* PBXTargetDependency */,
 				152A34B9199CE758004B68DC /* PBXTargetDependency */,
 				C0A2F04118975FF80072A7AB /* PBXTargetDependency */,
 			);
@@ -491,6 +694,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				84C89B57261644FE00EAA133 /* PBXTargetDependency */,
 				9FF504891A5E8B4C00AFDA55 /* PBXTargetDependency */,
 				152A349F199CE72E004B68DC /* PBXTargetDependency */,
 				15D1F3091994BBCA00302043 /* PBXTargetDependency */,
@@ -535,6 +739,10 @@
 				{
 					ProductGroup = C03781AF18BF654500FE4F13 /* Products */;
 					ProjectRef = C03781AE18BF654500FE4F13 /* cocos2d_lua_bindings.xcodeproj */;
+				},
+				{
+					ProductGroup = 84C89AB526163FB800EAA133 /* Products */;
+					ProjectRef = 84C89AB426163FB800EAA133 /* fairygui.xcodeproj */;
 				},
 				{
 					ProductGroup = 9FF504791A5E86D600AFDA55 /* Products */;
@@ -590,6 +798,20 @@
 			fileType = archive.ar;
 			path = "libluacocos2d tvOS.a";
 			remoteRef = 1AF87BA61F6F870C007BE51C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		84C89ABC26163FB800EAA133 /* libfairygui iOS.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libfairygui iOS.a";
+			remoteRef = 84C89ABB26163FB800EAA133 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		84C89ABE26163FB800EAA133 /* libfairygui Mac.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libfairygui Mac.a";
+			remoteRef = 84C89ABD26163FB800EAA133 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		9FF5047E1A5E86D600AFDA55 /* libsimulator Mac.a */ = {
@@ -656,11 +878,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				3866FAC12364443C009CC05A /* AppUtils.mm in Sources */,
+				84C89B0F261641ED00EAA133 /* DemoScene.cpp in Sources */,
 				3866FB2823644BE0009CC05A /* SimulatorApp.mm in Sources */,
 				5023813317EBBCE400990C9B /* AppDelegate.cpp in Sources */,
+				84C89B09261641ED00EAA133 /* ChatScene.cpp in Sources */,
+				84C89B2F261641ED00EAA133 /* ListEffectScene.cpp in Sources */,
+				84C89B19261641ED00EAA133 /* GuideScene.cpp in Sources */,
+				84C89B25261641ED00EAA133 /* BagWindow.cpp in Sources */,
+				84C89B2D261641ED00EAA133 /* VirtualListScene.cpp in Sources */,
 				A41646EA237E57D600D8F2AA /* main.m in Sources */,
+				84C89B27261641ED00EAA133 /* JoystickScene.cpp in Sources */,
+				84C89B1F261641ED00EAA133 /* CooldownScene.cpp in Sources */,
 				9FF504851A5E87B100AFDA55 /* ConsoleWindowController.m in Sources */,
+				84C89B15261641ED00EAA133 /* LoopListScene.cpp in Sources */,
+				84C89B0D261641ED00EAA133 /* EmojiParser.cpp in Sources */,
+				84C89B03261641ED00EAA133 /* Window1.cpp in Sources */,
+				84C89B07261641ED00EAA133 /* Window2.cpp in Sources */,
+				840E4618260ADA740091E812 /* ImGuiScene.cpp in Sources */,
+				84C89B11261641ED00EAA133 /* TransitionDemoScene.cpp in Sources */,
+				84C89B1D261641ED00EAA133 /* ModalWaitingScene.cpp in Sources */,
+				84C89B21261641ED00EAA133 /* BasicsScene.cpp in Sources */,
 				846817862603D521006E9556 /* SimulatorLog.m in Sources */,
+				84C89B05261641ED00EAA133 /* PullToRefreshScene.cpp in Sources */,
+				84C89B2B261641ED00EAA133 /* JoystickModule.cpp in Sources */,
+				84C89B29261641ED00EAA133 /* HitTestScene.cpp in Sources */,
+				84C89B17261641ED00EAA133 /* ScrollPaneScene.cpp in Sources */,
+				84C89B1B261641ED00EAA133 /* MenuScene.cpp in Sources */,
+				84C89B23261641ED00EAA133 /* BagScene.cpp in Sources */,
+				84C89B0B261641ED00EAA133 /* TreeViewScene.cpp in Sources */,
+				84C89B13261641ED00EAA133 /* MailItem.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -668,10 +914,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84C89B2C261641ED00EAA133 /* VirtualListScene.cpp in Sources */,
 				5023812517EBBCAC00990C9B /* RootViewController.mm in Sources */,
+				84C89B0C261641ED00EAA133 /* EmojiParser.cpp in Sources */,
+				84C89B2A261641ED00EAA133 /* JoystickModule.cpp in Sources */,
+				84C89B10261641ED00EAA133 /* TransitionDemoScene.cpp in Sources */,
 				F293BB9C15EB831F00256477 /* AppDelegate.cpp in Sources */,
+				84C89B06261641ED00EAA133 /* Window2.cpp in Sources */,
+				84C89B04261641ED00EAA133 /* PullToRefreshScene.cpp in Sources */,
+				84C89B14261641ED00EAA133 /* LoopListScene.cpp in Sources */,
+				84C89B12261641ED00EAA133 /* MailItem.cpp in Sources */,
+				84C89B1E261641ED00EAA133 /* CooldownScene.cpp in Sources */,
+				84C89B1C261641ED00EAA133 /* ModalWaitingScene.cpp in Sources */,
+				84C89B08261641ED00EAA133 /* ChatScene.cpp in Sources */,
+				84C89B1A261641ED00EAA133 /* MenuScene.cpp in Sources */,
+				84C89B28261641ED00EAA133 /* HitTestScene.cpp in Sources */,
+				84C89B02261641ED00EAA133 /* Window1.cpp in Sources */,
+				84C89B0E261641ED00EAA133 /* DemoScene.cpp in Sources */,
+				84C89B18261641ED00EAA133 /* GuideScene.cpp in Sources */,
+				84C89B20261641ED00EAA133 /* BasicsScene.cpp in Sources */,
 				5023812417EBBCAC00990C9B /* main.m in Sources */,
+				84C89B2E261641ED00EAA133 /* ListEffectScene.cpp in Sources */,
+				84C89B16261641ED00EAA133 /* ScrollPaneScene.cpp in Sources */,
+				84C89B26261641ED00EAA133 /* JoystickScene.cpp in Sources */,
+				84C89B24261641ED00EAA133 /* BagWindow.cpp in Sources */,
+				84C89B22261641ED00EAA133 /* BagScene.cpp in Sources */,
 				5023811817EBBCAC00990C9B /* AppController.mm in Sources */,
+				84C89B0A261641ED00EAA133 /* TreeViewScene.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -693,6 +962,16 @@
 			name = "libcocos2d iOS";
 			targetProxy = 15D1F3081994BBCA00302043 /* PBXContainerItemProxy */;
 		};
+		84C89AC426163FCB00EAA133 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "libfairygui Mac";
+			targetProxy = 84C89AC326163FCB00EAA133 /* PBXContainerItemProxy */;
+		};
+		84C89B57261644FE00EAA133 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "libfairygui iOS";
+			targetProxy = 84C89B56261644FE00EAA133 /* PBXContainerItemProxy */;
+		};
 		9FEE0E441A5FC95000FEA1B0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = libsimulator;
@@ -702,10 +981,6 @@
 			isa = PBXTargetDependency;
 			name = libsimulator_iOS;
 			targetProxy = 9FF504881A5E8B4C00AFDA55 /* PBXContainerItemProxy */;
-		};
-		9FF505C11A5F0F0900AFDA55 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = libsimulator;
 		};
 		C0A2F04118975FF80072A7AB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -745,6 +1020,7 @@
 					"$(SRCROOT)/../Classes/protobuf-lite",
 					"$(SRCROOT)/../Classes",
 					"$(SRCROOT)/../../cocos2d-x/tools/simulator/libsimulator/lib",
+					"$(inherited)",
 				);
 				INFOPLIST_FILE = mac/Info.plist;
 				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../../cocos2d-x/external/glsl-optimizer/prebuilt/mac/";
@@ -782,6 +1058,7 @@
 					"$(SRCROOT)/../Classes/protobuf-lite",
 					"$(SRCROOT)/../Classes",
 					"$(SRCROOT)/../../cocos2d-x/tools/simulator/libsimulator/lib",
+					"$(inherited)",
 				);
 				INFOPLIST_FILE = mac/Info.plist;
 				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/../../cocos2d-x/external/glsl-optimizer/prebuilt/mac/";
@@ -822,7 +1099,7 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../../cocos2d-x/extensions/libfairygui/Classes";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -846,7 +1123,7 @@
 				);
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "$(SRCROOT)/../../cocos2d-x/extensions/libfairygui/Classes";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -877,6 +1154,7 @@
 					"$(SRCROOT)/../Classes/protobuf-lite",
 					"$(SRCROOT)/../Classes",
 					"$(SRCROOT)/../../cocos2d-x/tools/simulator/libsimulator/lib",
+					"$(inherited)",
 				);
 				INFOPLIST_FILE = ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -923,6 +1201,7 @@
 					"$(SRCROOT)/../Classes/protobuf-lite",
 					"$(SRCROOT)/../Classes",
 					"$(SRCROOT)/../../cocos2d-x/tools/simulator/libsimulator/lib",
+					"$(inherited)",
 				);
 				INFOPLIST_FILE = ios/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
