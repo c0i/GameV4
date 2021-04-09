@@ -16,6 +16,9 @@
     <Filter Include="Classes\test\fgui">
       <UniqueIdentifier>{bb362d05-2748-4aa4-9e85-c7704f5fe4e9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Classes\core">
+      <UniqueIdentifier>{69e02b40-2b14-4b34-a946-af71feb6443a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Classes\AppDelegate.h">
@@ -104,6 +107,12 @@
     <ClInclude Include="..\Classes\test\fgui\Window2.h">
       <Filter>Classes\test\fgui</Filter>
     </ClInclude>
+    <ClInclude Include="..\Classes\core\GameScene.h">
+      <Filter>Classes\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\core\RuntimeScene.h">
+      <Filter>Classes\core</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Classes\AppDelegate.cpp">
@@ -187,6 +196,12 @@
     </ClCompile>
     <ClCompile Include="..\Classes\test\fgui\Window2.cpp">
       <Filter>Classes\test\fgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\core\GameScene.cpp">
+      <Filter>Classes\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\core\RuntimeScene.cpp">
+      <Filter>Classes\core</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

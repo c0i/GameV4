@@ -38,6 +38,7 @@
     <ClCompile Include="..\auto\lua_cocos2dx_controller_auto.cpp" />
     <ClCompile Include="..\auto\lua_cocos2dx_csloader_auto.cpp" />
     <ClCompile Include="..\auto\lua_cocos2dx_extension_auto.cpp" />
+    <ClCompile Include="..\auto\lua_cocos2dx_fairygui_auto.cpp" />
     <ClCompile Include="..\auto\lua_cocos2dx_navmesh_auto.cpp" />
     <ClCompile Include="..\auto\lua_cocos2dx_physics3d_auto.cpp" />
     <ClCompile Include="..\auto\lua_cocos2dx_physics_auto.cpp" />
@@ -62,7 +63,8 @@
     <ClCompile Include="..\manual\cocostudio\lua_cocos2dx_coco_studio_manual.cpp" />
     <ClCompile Include="..\manual\cocostudio\lua_cocos2dx_csloader_manual.cpp" />
     <ClCompile Include="..\manual\extension\lua_cocos2dx_extension_manual.cpp" />
-    <ClCompile Include="..\manual\fairygui\lua_fairygui.cpp" />
+    <ClCompile Include="..\manual\fairygui\LuaFairyGuiConversions.cpp" />
+    <ClCompile Include="..\manual\fairygui\lua_cocos2dx_fairygui_manual.cpp" />
     <ClCompile Include="..\manual\LuaBasicConversions.cpp" />
     <ClCompile Include="..\manual\lua_module_register.cpp" />
     <ClCompile Include="..\manual\navmesh\lua_cocos2dx_navmesh_conversions.cpp" />
@@ -109,6 +111,7 @@
     <ClInclude Include="..\auto\lua_cocos2dx_controller_auto.hpp" />
     <ClInclude Include="..\auto\lua_cocos2dx_csloader_auto.hpp" />
     <ClInclude Include="..\auto\lua_cocos2dx_extension_auto.hpp" />
+    <ClInclude Include="..\auto\lua_cocos2dx_fairygui_auto.hpp" />
     <ClInclude Include="..\auto\lua_cocos2dx_navmesh_auto.hpp" />
     <ClInclude Include="..\auto\lua_cocos2dx_physics3d_auto.hpp" />
     <ClInclude Include="..\auto\lua_cocos2dx_physics_auto.hpp" />
@@ -133,7 +136,8 @@
     <ClInclude Include="..\manual\cocostudio\lua_cocos2dx_coco_studio_manual.hpp" />
     <ClInclude Include="..\manual\cocostudio\lua_cocos2dx_csloader_manual.hpp" />
     <ClInclude Include="..\manual\extension\lua_cocos2dx_extension_manual.h" />
-    <ClInclude Include="..\manual\fairygui\lua_fairygui.hpp" />
+    <ClInclude Include="..\manual\fairygui\LuaFairyGuiConversions.h" />
+    <ClInclude Include="..\manual\fairygui\lua_cocos2dx_fairygui_manual.hpp" />
     <ClInclude Include="..\manual\Lua-BindingsExport.h" />
     <ClInclude Include="..\manual\LuaBasicConversions.h" />
     <ClInclude Include="..\manual\lua_module_register.h" />

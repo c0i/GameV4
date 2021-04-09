@@ -58,6 +58,9 @@ public:
 
     GObject* getModalWaitingPane() const { return _modalWaitPane; }
 
+    std::function<void()> doShowAnimationDelegate = nullptr; // for script: lua
+    std::function<void()> doHideAnimationDelegate = nullptr; // for script: lua
+
 protected:
     virtual void handleInit() override;
     virtual void onInit(); // lua can't override, send a event callback

@@ -62,7 +62,7 @@ GObject::GObject() : _scale{1, 1},
 GObject::~GObject()
 {
     removeFromParent();
-
+    
     if (_displayObject)
     {
         _displayObject->removeFromParent();
@@ -75,6 +75,8 @@ GObject::~GObject()
 
     if (_weakPtrRef > 0)
         WeakPtr::markDisposed(this);
+
+    dispatchEvent(UIEventType::OnDestroy); // c0i
 }
 
 bool GObject::init()

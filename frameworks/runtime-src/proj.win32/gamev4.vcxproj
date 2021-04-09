@@ -92,7 +92,7 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <TargetMachine>MachineX86</TargetMachine>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
       <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories);$(_COCOS_LIB_PATH_WIN32_BEGIN);$(_COCOS_LIB_PATH_WIN32_END)</AdditionalLibraryDirectories>
       <AdditionalDependencies>libcurl.lib;libfairygui.lib;%(AdditionalDependencies);$(_COCOS_LIB_WIN32_BEGIN);$(_COCOS_LIB_WIN32_END)</AdditionalDependencies>
       <IgnoreSpecificDefaultLibraries>libcmt.lib</IgnoreSpecificDefaultLibraries>
@@ -200,6 +200,8 @@ xcopy "$(ProjectDir)..\..\..\src" "$(LocalDebuggerWorkingDirectory)\Resources\sr
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="..\Classes\AppDelegate.h" />
+    <ClInclude Include="..\Classes\core\GameScene.h" />
+    <ClInclude Include="..\Classes\core\RuntimeScene.h" />
     <ClInclude Include="..\Classes\test\fgui\BagScene.h" />
     <ClInclude Include="..\Classes\test\fgui\BagWindow.h" />
     <ClInclude Include="..\Classes\test\fgui\BasicsScene.h" />
@@ -232,6 +234,8 @@ xcopy "$(ProjectDir)..\..\..\src" "$(LocalDebuggerWorkingDirectory)\Resources\sr
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Classes\AppDelegate.cpp" />
+    <ClCompile Include="..\Classes\core\GameScene.cpp" />
+    <ClCompile Include="..\Classes\core\RuntimeScene.cpp" />
     <ClCompile Include="..\Classes\test\fgui\BagScene.cpp" />
     <ClCompile Include="..\Classes\test\fgui\BagWindow.cpp" />
     <ClCompile Include="..\Classes\test\fgui\BasicsScene.cpp" />

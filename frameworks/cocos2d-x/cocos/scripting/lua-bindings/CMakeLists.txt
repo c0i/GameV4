@@ -31,7 +31,9 @@ set(lua_bindings_manual_headers
     manual/cocostudio/CustomGUIReader.h
     manual/ui/lua_cocos2dx_ui_manual.hpp
     manual/controller/lua_cocos2dx_controller_manual.hpp
-    manual/fairygui/lua_fairygui.hpp
+    # manual/fairygui/lua_fairygui.hpp
+    manual/fairygui/LuaFairyGuiConversions.h
+    manual/fairygui/lua_cocos2dx_fairygui_manual.hpp
     )
 
 set(lua_bindings_manual_files
@@ -67,7 +69,9 @@ set(lua_bindings_manual_files
     manual/physics3d/lua_cocos2dx_physics3d_manual.cpp
     manual/navmesh/lua_cocos2dx_navmesh_conversions.cpp
     manual/navmesh/lua_cocos2dx_navmesh_manual.cpp
-        manual/fairygui/lua_fairygui.cpp
+        # manual/fairygui/lua_fairygui.cpp
+    manual/fairygui/LuaFairyGuiConversions.cpp
+    manual/fairygui/lua_cocos2dx_fairygui_manual.cpp
     )
 
 set(lua_bindings_auto_headers
@@ -84,6 +88,7 @@ set(lua_bindings_auto_headers
     auto/lua_cocos2dx_physics_auto.hpp
     auto/lua_cocos2dx_extension_auto.hpp
     auto/lua_cocos2dx_backend_auto.hpp
+    auto/lua_cocos2dx_fairygui_auto.hpp
     )
 
 set(lua_bindings_auto_files
@@ -100,6 +105,7 @@ set(lua_bindings_auto_files
     auto/lua_cocos2dx_physics3d_auto.cpp
     auto/lua_cocos2dx_navmesh_auto.cpp
     auto/lua_cocos2dx_backend_auto.cpp
+    auto/lua_cocos2dx_fairygui_auto.cpp
     )
 
 if(APPLE)

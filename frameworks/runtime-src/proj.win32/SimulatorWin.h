@@ -40,6 +40,7 @@ public:
 
     virtual void quit();
     virtual void relaunch();
+    virtual void setOnTop(bool yes);
     virtual void openNewPlayer();
     virtual void openNewPlayerWithProjectConfig(const ProjectConfig &config);
     virtual void openProjectWithProjectConfig(const ProjectConfig &config);

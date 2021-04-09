@@ -276,7 +276,13 @@
     <ClCompile Include="..\manual\ui\lua_cocos2dx_webview_manual.cpp">
       <Filter>manual\ui</Filter>
     </ClCompile>
-    <ClCompile Include="..\manual\fairygui\lua_fairygui.cpp">
+    <ClCompile Include="..\auto\lua_cocos2dx_fairygui_auto.cpp">
+      <Filter>auto</Filter>
+    </ClCompile>
+    <ClCompile Include="..\manual\fairygui\LuaFairyGuiConversions.cpp">
+      <Filter>manual\fairygui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\manual\fairygui\lua_cocos2dx_fairygui_manual.cpp">
       <Filter>manual\fairygui</Filter>
     </ClCompile>
   </ItemGroup>
@@ -488,7 +494,13 @@
     <ClInclude Include="..\manual\ui\lua_cocos2dx_webview_manual.hpp">
       <Filter>manual\ui</Filter>
     </ClInclude>
-    <ClInclude Include="..\manual\fairygui\lua_fairygui.hpp">
+    <ClInclude Include="..\auto\lua_cocos2dx_fairygui_auto.hpp">
+      <Filter>auto</Filter>
+    </ClInclude>
+    <ClInclude Include="..\manual\fairygui\LuaFairyGuiConversions.h">
+      <Filter>manual\fairygui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\manual\fairygui\lua_cocos2dx_fairygui_manual.hpp">
       <Filter>manual\fairygui</Filter>
     </ClInclude>
   </ItemGroup>

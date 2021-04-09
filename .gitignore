@@ -12,3 +12,4 @@ frameworks/cocos2d-x/tools/simulator/libsimulator/proj.ios_mac/libsimulator.xcod
 frameworks/runtime-src/proj.ios_mac/gamev4.xcodeproj/xcshareddata
 frameworks/runtime-src/proj.ios_mac/gamev4.xcodeproj/xcuserdata
 frameworks/cocos2d-x/extensions/libfairygui/proj.ios_mac/fairygui.xcodeproj/xcuserdata/
+*.pyc

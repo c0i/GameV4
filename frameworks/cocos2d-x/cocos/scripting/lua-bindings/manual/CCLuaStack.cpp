@@ -53,6 +53,8 @@ extern "C" {
 #include "scripting/lua-bindings/auto/lua_cocos2dx_physics_auto.hpp"
 #include "scripting/lua-bindings/manual/cocos2d/lua_cocos2dx_physics_manual.hpp"
 #include "scripting/lua-bindings/auto/lua_cocos2dx_backend_auto.hpp"
+#include "scripting/lua-bindings/auto/lua_cocos2dx_fairygui_auto.hpp"
+#include "scripting/lua-bindings/manual/fairygui/lua_cocos2dx_fairygui_manual.hpp"
 #include "base/ZipUtils.h"
 #include "scripting/deprecated/CCBool.h"
 #include "scripting/deprecated/CCDouble.h"
@@ -149,6 +151,10 @@ bool LuaStack::init()
     register_all_cocos2dx_math_manual(_state);
     register_all_cocos2dx_shaders_manual(_state);
     register_all_cocos2dx_bytearray_manual(_state);
+    
+    // FairyGUI
+    register_all_fairygui(_state);
+    register_all_fairygui_manual(_state);
     
     tolua_luanode_open(_state);
     register_luanode_manual(_state);

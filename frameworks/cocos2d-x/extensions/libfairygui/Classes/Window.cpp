@@ -232,12 +232,30 @@ void Window::addUISource(IUISource * uiSource)
 
 void Window::doShowAnimation()
 {
-    onShown();
+    // >c0i
+    if (doShowAnimationDelegate)
+    {
+        doShowAnimationDelegate();
+    }
+    // c0i<
+    else
+    {
+        onShown();
+    }
 }
 
 void Window::doHideAnimation()
 {
-    hideImmediately();
+    // >c0i
+    if (doHideAnimationDelegate != nullptr)
+    {
+        doHideAnimationDelegate();
+    }
+    // c0i<
+    else
+    {
+        hideImmediately();
+    }      
 }
 
 void Window::closeEventHandler(EventContext * context)

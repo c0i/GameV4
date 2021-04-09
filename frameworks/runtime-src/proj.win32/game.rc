@@ -9,16 +9,11 @@
 //
 #include "winres.h"
 
-/* IDC_STATIC is documented in winuser.h, but not defined. */
-#ifndef IDC_STATIC
-#define IDC_STATIC (-1)
-#endif
-
 /////////////////////////////////////////////////////////////////////////////
 #undef APSTUDIO_READONLY_SYMBOLS
 
 /////////////////////////////////////////////////////////////////////////////
-// Chinese (Simplified, PRC) resources
+// 中文(简体，中国) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
 LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
@@ -70,7 +65,7 @@ CAPTION "About Simulator"
 FONT 8, "MS Shell Dlg", 400, 0, 0x1
 BEGIN
     DEFPUSHBUTTON   "OK",IDOK,173,69,63,18
-    CTEXT           "Cocos Simulator",IDC_STATIC,28,23,173,17
+    CTEXT           "Cocos Simulator - https://github.com/c0i/gamev4",IDC_STATIC,28,23,173,17
 END
 
 
@@ -92,12 +87,23 @@ BEGIN
 END
 #endif    // APSTUDIO_INVOKED
 
-#endif    // Chinese (Simplified, PRC) resources
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_DIALOG_ABOUT AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+#endif    // 中文(简体，中国) resources
 /////////////////////////////////////////////////////////////////////////////
 
 
 /////////////////////////////////////////////////////////////////////////////
-// English resources
+// 英语 resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
 LANGUAGE LANG_ENGLISH, SUBLANG_NEUTRAL
@@ -116,12 +122,12 @@ BEGIN
     END
 END
 
-#endif    // English resources
+#endif    // 英语 resources
 /////////////////////////////////////////////////////////////////////////////
 
 
 /////////////////////////////////////////////////////////////////////////////
-// English (United States) resources
+// 英语(美国) resources
 
 #if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
 LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
@@ -150,6 +156,7 @@ END
 // remains consistent on all systems.
 GLFW_ICON               ICON                    "res\\game.ico"
 
+
 /////////////////////////////////////////////////////////////////////////////
 //
 // Version
@@ -170,7 +177,7 @@ VS_VERSION_INFO VERSIONINFO
 BEGIN
     BLOCK "StringFileInfo"
     BEGIN
-        BLOCK "040904B0"
+        BLOCK "040904b0"
         BEGIN
             VALUE "FileDescription", "game Module"
             VALUE "FileVersion", "1, 0, 0, 1"
@@ -187,7 +194,7 @@ BEGIN
     END
 END
 
-#endif    // English (United States) resources
+#endif    // 英语(美国) resources
 /////////////////////////////////////////////////////////////////////////////
 
 

@@ -166,6 +166,12 @@ void SimulatorWin::relaunch()
     quit();
 }
 
+void SimulatorWin::setOnTop(bool yes)
+{
+    auto flag = yes ? HWND_TOPMOST : HWND_NOTOPMOST;
+    SetWindowPos(_hwnd, flag, 1, 1, 1, 1, SWP_NOMOVE | SWP_NOSIZE);
+}
+
 void SimulatorWin::openNewPlayer()
 {
     openNewPlayerWithProjectConfig(_project);
@@ -475,6 +481,8 @@ void SimulatorWin::setupUI()
     menuBar->addItem("REFRESH_MENU_SEP", "-", "VIEW_MENU");
     menuBar->addItem("REFRESH_MENU", tr("Refresh"), "VIEW_MENU");
 
+    menuBar->addItem("ONTOP_MENU", tr("Top"), "VIEW_MENU");
+
     HWND &hwnd = _hwnd;
     ProjectConfig &project = _project;
     auto dispatcher = Director::getInstance()->getEventDispatcher();
@@ -493,12 +501,17 @@ void SimulatorWin::setupUI()
                     player::PlayerMenuItem *menuItem = static_cast<player::PlayerMenuItem*>(menuEvent->getUserData());
                     if (menuItem)
                     {
+                        string data = dArgParse["data"].GetString();
+                        if (data == "ONTOP_MENU")
+                        {
+                            menuItem->setChecked(!menuItem->isChecked());
+                            _instance->setOnTop(menuItem->isChecked());
+                        }
+
                         if (menuItem->isChecked())
                         {
                             return;
                         }
-
-                        string data = dArgParse["data"].GetString();
 
                         if ((data == "CLOSE_MENU") || (data == "EXIT_MENU"))
                         {

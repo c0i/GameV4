@@ -59,7 +59,12 @@ set(GAME_HEADER ${RUNTIME_SRC_ROOT}/Classes/AppDelegate.h)
 set(GAME_SOURCE ${RUNTIME_SRC_ROOT}/Classes/AppDelegate.cpp)
 # sources need to compile info, include dirs and source files
 
-# file list
+# game core
+file(GLOB_RECURSE GAME_CORE_SRC ${RUNTIME_SRC_ROOT}/Classes/core/*.cpp)
+list(APPEND GAME_SOURCE ${GAME_CORE_SRC})
+
+
+# fairy test file list
 file(GLOB_RECURSE FAIRYGUI_TEST_SRC ${RUNTIME_SRC_ROOT}/Classes/test/fgui/*.cpp)
 list(APPEND GAME_SOURCE ${FAIRYGUI_TEST_SRC})
 

@@ -1346,6 +1346,7 @@ void GComponent::constructExtension(ByteBuffer* buffer)
 
 void GComponent::onConstruct()
 {
+    dispatchEvent(UIEventType::OnConstruct); // c0i
 }
 
 void GComponent::setup_afterAdd(ByteBuffer* buffer, int beginPos)

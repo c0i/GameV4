@@ -50,6 +50,8 @@ public:
     static const int OnInit = 100;
     static const int OnShown = 101;
     static const int OnHide = 102;
+    static const int OnConstruct = 103;
+    static const int OnDestroy = 104;
 };
 
 NS_FGUI_END

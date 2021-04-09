@@ -56,6 +56,7 @@ void DemoScene::onClose(EventContext* context)
 DemoScene::DemoScene() :
     _groot(nullptr)
 {
+    FileUtils::getInstance()->addSearchPath("res");
 }
 
 DemoScene::~DemoScene()

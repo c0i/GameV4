@@ -3,20 +3,20 @@ local MainScene = class("MainScene", cc.load("mvc").ViewBase)
 
 local function testImGui(  )
 
-    if ImGui then
-        dump(ImGui)
+    if not ImGui then return end
 
-        local color = {100,200,255}
-        dump(color)
-        ImGui.draw = function ()
-            ImGui.Begin('[Lua window]')
-            ImGui.Text('[Lua Test]')
-            if ImGui.Button('Lua Button') then
-                print('Lua Button clicked')
-            end
-            color = ImGui.ColorEdit3('color', color)
-            ImGui.End()
+    dump(ImGui)
+
+    local color = {100,200,255}
+    dump(color)
+    ImGui.draw = function ()
+        ImGui.Begin('[Lua window]')
+        ImGui.Text('[Lua Test]')
+        if ImGui.Button('Lua Button') then
+            print('Lua Button clicked')
         end
+        color = ImGui.ColorEdit3('color', color)
+        ImGui.End()
     end
 end
 
@@ -32,6 +32,10 @@ function MainScene:onCreate()
         :addTo(self)
 
     testImGui()
+
+    dump(fgui, 'fgui')
+
+    dump(getmetatable(fgui.Window))
 end
 
 return MainScene
