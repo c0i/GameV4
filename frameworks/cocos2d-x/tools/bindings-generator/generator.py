@@ -111,6 +111,10 @@ stl_type_map = {
     'array': 1
 }
 
+def get_words(str):
+    ret = str.replace('\n', ' ').replace(',', ' ').split()
+    return ret
+
 def find_sub_string_count(s, start, end, substr):
     count = 0
     pos = s.find(substr, start, end)
@@ -1270,7 +1274,7 @@ class Generator(object):
         self.headers = opts['headers'].split(' ')
         self.classes = opts['classes']
         self.classes_need_extend = opts['classes_need_extend']
-        self.classes_have_no_parents = opts['classes_have_no_parents'].split(' ')
+        self.classes_have_no_parents = get_words(opts['classes_have_no_parents'])
         self.base_classes_to_skip = opts['base_classes_to_skip'].split(' ')
         self.abstract_classes = opts['abstract_classes'].split(' ')
         self.clang_args = opts['clang_args']
@@ -1796,6 +1800,7 @@ def main():
 
     clang_lib_path = os.path.join(userconfig.get('DEFAULT', 'cxxgeneratordir'), 'libclang')
     cindex.Config.set_library_path(clang_lib_path);
+    # cindex.Config.set_library_file(os.path.join(clang_lib_path, 'libclang.dll'))
 
     config = ConfigParser.SafeConfigParser()
     config.read(args[0])
@@ -1809,7 +1814,7 @@ def main():
             sections = []
             sections.append(opts.section)
         else:
-            raise Exception("Section not found in config file")
+            raise Exception("Section (%s)not found in config file (%s)" % (opts.section, args[0]))
     else:
         print("processing all sections")
         sections = config.sections()
@@ -1847,7 +1852,7 @@ def main():
                 'prefix': config.get(s, 'prefix'),
                 'headers':    (config.get(s, 'headers'        , 0, dict(userconfig.items('DEFAULT')))),
                 'replace_headers': config.get(s, 'replace_headers') if config.has_option(s, 'replace_headers') else None,
-                'classes': config.get(s, 'classes').split(' '),
+                'classes': get_words(config.get(s, 'classes')),
                 'classes_need_extend': config.get(s, 'classes_need_extend').split(' ') if config.has_option(s, 'classes_need_extend') else [],
                 'clang_args': (config.get(s, 'extra_arguments', 0, dict(userconfig.items('DEFAULT'))) or "").split(" "),
                 'target': os.path.join(workingdir, "targets", t),

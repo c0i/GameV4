@@ -2706,6 +2706,7 @@ class TranslationUnit(ClangObject):
                 unsaved_array[i].contents = b(contents)
                 unsaved_array[i].length = len(contents)
 
+        print('clang try to load file', filename)
         ptr = conf.lib.clang_parseTranslationUnit(index, filename, args_array,
                                     len(args), unsaved_array,
                                     len(unsaved_files), options)
@@ -4030,6 +4031,7 @@ class Config:
 
     def get_cindex_library(self):
         try:
+            print('> cdll.LoadLibrary', self.get_filename())
             library = cdll.LoadLibrary(self.get_filename())
         except OSError as e:
             msg = str(e) + ". To provide a path to libclang use " \
