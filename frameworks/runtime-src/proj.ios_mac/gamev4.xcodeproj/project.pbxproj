@@ -98,6 +98,10 @@
 		84C89B2F261641ED00EAA133 /* ListEffectScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84C89B01261641ED00EAA133 /* ListEffectScene.cpp */; };
 		84C89B322616426600EAA133 /* libfairygui Mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C89ABE26163FB800EAA133 /* libfairygui Mac.a */; };
 		84C89B582616450800EAA133 /* libfairygui iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84C89ABC26163FB800EAA133 /* libfairygui iOS.a */; };
+		84D50AED26222AC70041077C /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84D50AEB26222AC70041077C /* GameScene.cpp */; };
+		84D50AEE26222AC70041077C /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84D50AEB26222AC70041077C /* GameScene.cpp */; };
+		84D50AEF26222AC70041077C /* RuntimeScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84D50AEC26222AC70041077C /* RuntimeScene.cpp */; };
+		84D50AF026222AC70041077C /* RuntimeScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 84D50AEC26222AC70041077C /* RuntimeScene.cpp */; };
 		84EBB98726012A5800E8DFB7 /* config.json in Resources */ = {isa = PBXBuildFile; fileRef = 1A8A4ED61F6F9AE70044495E /* config.json */; };
 		9FA3AE4E1BE9BCC900FC9645 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FA3AE4D1BE9BCC900FC9645 /* CFNetwork.framework */; };
 		9FF504841A5E87B100AFDA55 /* ConsoleWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FF504811A5E87B100AFDA55 /* ConsoleWindow.xib */; };
@@ -345,6 +349,11 @@
 		84C89AFF261641ED00EAA133 /* MailItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MailItem.h; sourceTree = "<group>"; };
 		84C89B00261641ED00EAA133 /* LoopListScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoopListScene.h; sourceTree = "<group>"; };
 		84C89B01261641ED00EAA133 /* ListEffectScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ListEffectScene.cpp; sourceTree = "<group>"; };
+		84D50AE726222AC70041077C /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
+		84D50AE926222AC70041077C /* dmon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dmon.h; sourceTree = "<group>"; };
+		84D50AEA26222AC70041077C /* RuntimeScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeScene.h; sourceTree = "<group>"; };
+		84D50AEB26222AC70041077C /* GameScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameScene.cpp; sourceTree = "<group>"; };
+		84D50AEC26222AC70041077C /* RuntimeScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RuntimeScene.cpp; sourceTree = "<group>"; };
 		9FA3AE4D1BE9BCC900FC9645 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
 		9FF504781A5E86D600AFDA55 /* libsimulator.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = libsimulator.xcodeproj; path = "../../cocos2d-x/tools/simulator/libsimulator/proj.ios_mac/libsimulator.xcodeproj"; sourceTree = "<group>"; };
 		9FF504811A5E87B100AFDA55 /* ConsoleWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConsoleWindow.xib; sourceTree = "<group>"; };
@@ -562,6 +571,27 @@
 			path = fgui;
 			sourceTree = "<group>";
 		};
+		84D50AE626222AC70041077C /* core */ = {
+			isa = PBXGroup;
+			children = (
+				84D50AE826222AC70041077C /* desktop */,
+				84D50AEB26222AC70041077C /* GameScene.cpp */,
+				84D50AE726222AC70041077C /* GameScene.h */,
+				84D50AEC26222AC70041077C /* RuntimeScene.cpp */,
+				84D50AEA26222AC70041077C /* RuntimeScene.h */,
+			);
+			name = core;
+			path = ../Classes/core;
+			sourceTree = "<group>";
+		};
+		84D50AE826222AC70041077C /* desktop */ = {
+			isa = PBXGroup;
+			children = (
+				84D50AE926222AC70041077C /* dmon.h */,
+			);
+			path = desktop;
+			sourceTree = "<group>";
+		};
 		9FF504791A5E86D600AFDA55 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -651,6 +681,7 @@
 		F293BB7C15EB830F00256477 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				84D50AE626222AC70041077C /* core */,
 				840E4613260ADA740091E812 /* test */,
 				F293BB7E15EB831F00256477 /* AppDelegate.cpp */,
 				F293BB7F15EB831F00256477 /* AppDelegate.h */,
@@ -896,8 +927,10 @@
 				84C89B07261641ED00EAA133 /* Window2.cpp in Sources */,
 				840E4618260ADA740091E812 /* ImGuiScene.cpp in Sources */,
 				84C89B11261641ED00EAA133 /* TransitionDemoScene.cpp in Sources */,
+				84D50AF026222AC70041077C /* RuntimeScene.cpp in Sources */,
 				84C89B1D261641ED00EAA133 /* ModalWaitingScene.cpp in Sources */,
 				84C89B21261641ED00EAA133 /* BasicsScene.cpp in Sources */,
+				84D50AEE26222AC70041077C /* GameScene.cpp in Sources */,
 				846817862603D521006E9556 /* SimulatorLog.m in Sources */,
 				84C89B05261641ED00EAA133 /* PullToRefreshScene.cpp in Sources */,
 				84C89B2B261641ED00EAA133 /* JoystickModule.cpp in Sources */,
@@ -932,11 +965,13 @@
 				84C89B02261641ED00EAA133 /* Window1.cpp in Sources */,
 				84C89B0E261641ED00EAA133 /* DemoScene.cpp in Sources */,
 				84C89B18261641ED00EAA133 /* GuideScene.cpp in Sources */,
+				84D50AED26222AC70041077C /* GameScene.cpp in Sources */,
 				84C89B20261641ED00EAA133 /* BasicsScene.cpp in Sources */,
 				5023812417EBBCAC00990C9B /* main.m in Sources */,
 				84C89B2E261641ED00EAA133 /* ListEffectScene.cpp in Sources */,
 				84C89B16261641ED00EAA133 /* ScrollPaneScene.cpp in Sources */,
 				84C89B26261641ED00EAA133 /* JoystickScene.cpp in Sources */,
+				84D50AEF26222AC70041077C /* RuntimeScene.cpp in Sources */,
 				84C89B24261641ED00EAA133 /* BagWindow.cpp in Sources */,
 				84C89B22261641ED00EAA133 /* BagScene.cpp in Sources */,
 				5023811817EBBCAC00990C9B /* AppController.mm in Sources */,
@@ -1006,6 +1041,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				COMBINE_HIDPI_IMAGES = YES;
 				CONFIGURATION_BUILD_DIR = ../../../simulator/mac;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1046,6 +1082,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ARCHS = "$(ARCHS_STANDARD)";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = mac/Prefix.pch;

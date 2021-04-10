@@ -10,8 +10,9 @@ local UIEventType = fairygui.UIEventType
 function FWindow2:ctor()
     print(tolua.type(self))
     self:addEventListener(UIEventType.OnInit, handler(self, self.onInit))
-    self:addEventListener(UIEventType.OnShown, handler(self, self.onShown))
-    self:addEventListener(UIEventType.OnHide, handler(self, self.onHide))
+
+    self.doShowAnimationDelegate = handler(self, self.doShowAnimation)
+    self.doHideAnimationDelegate = handler(self, self.doHideAnimation)
 end
 
 function FWindow2:onInit()
@@ -26,18 +27,18 @@ function FWindow2:doShowAnimation()
 
     GTween:to(self:getScale(), cc.p(1, 1), 0.3)
     :setTarget(self, fairygui.TweenPropType.Scale)
-    :onComplete(handler(self, self.hideImmediately))
+    :onComplete(handler(self, self.onShown))
  end
 
 function FWindow2:doHideAnimation()
-    -- body
+    GTween:to(self:getScale(), cc.p(0.1, 0.1), 0.3)
+    :setTarget(self, fairygui.TweenPropType.Scale)
+    :onComplete(handler(self, self.hideImmediately))
 end
 
 function FWindow2:onShown()
     print('FWindow2.onShow')
     self:getContentPane():getTransition('t1'):play()
-
-    self:doShowAnimation()
 end
 
 function FWindow2:onHide()

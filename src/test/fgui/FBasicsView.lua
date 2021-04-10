@@ -172,7 +172,7 @@ function FBasicsView:playWindow()
             self._winA:show()
         end)
         obj:getChild('n1'):onClick(function (ctx)
-            print('n1')
+            print('click n1')
             self._winB:show()
         end)
     end
@@ -189,7 +189,7 @@ function FBasicsView:playPopup()
         self._pm:addItem("Item 3", handler(self, self.onClickMenu))
         self._pm:addItem("Item 4", handler(self, self.onClickMenu))
     end
- 
+
     if not self._popupCom then
         self._popupCom = fairygui.UIPackage:createObject('Basics', 'Component12')
         self._popupCom:retain()
