@@ -43,6 +43,12 @@
 #include "AppLang.h"
 #include "AppUtils.hpp"
 
+extern "C" {
+#define DMON_IMPL
+#include "core/desktop/dmon.h"
+}
+
+#include "core/RuntimeScene.h"
 
 #if (GLFW_VERSION_MAJOR >= 3) && (GLFW_VERSION_MINOR >= 1)
 #define PLAYER_SUPPORT_DROP 1
@@ -54,6 +60,28 @@ using namespace std;
 using namespace cocos2d;
 
 static id SIMULATOR = nullptr;
+
+static void watch_callback(dmon_watch_id watch_id, dmon_action action, const char* rootdir,
+    const char* filepath, const char* oldfilepath, void* user)
+{
+    switch (action) {
+    case DMON_ACTION_CREATE:
+        printf("CREATE: [%s]%s\n", rootdir, filepath);
+        break;
+    case DMON_ACTION_DELETE:
+        printf("DELETE: [%s]%s\n", rootdir, filepath);
+        break;
+    case DMON_ACTION_MODIFY:
+        printf("MODIFY: [%s]%s\n", rootdir, filepath);
+        [SIMULATOR reloadGame];
+        break;
+    case DMON_ACTION_MOVE:
+        printf("MOVE: [%s]%s -> [%s]%s\n", rootdir, oldfilepath, rootdir, filepath);
+        break;
+    }
+}
+
+
 @implementation AppController
 
 @synthesize menu;
@@ -86,6 +114,7 @@ static void glfwDropFunc(GLFWwindow *window, int count, const char **files)
 
 -(void) dealloc
 {
+    dmon_deinit();
     Director::getInstance()->end();
     player::PlayerProtocol::getInstance()->purgeInstance();
     [super dealloc];
@@ -128,6 +157,7 @@ static void glfwDropFunc(GLFWwindow *window, int count, const char **files)
 
 -(void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
+    dmon_init();
     SIMULATOR = self;
     player::PlayerMac::create();
     
@@ -446,6 +476,9 @@ static void glfwDropFunc(GLFWwindow *window, int count, const char **files)
         FileUtils::getInstance()->setWritablePath(writablePath.c_str());
     }
     
+    auto luaSrcPath = projectDir + "src/";
+    dmon_watch(luaSrcPath.c_str(), watch_callback, DMON_WATCHFLAGS_RECURSIVE, NULL);
+    
     // path for looking Lang file, Studio Default images
     NSString *resourcePath = [[NSBundle mainBundle] resourcePath];
     FileUtils::getInstance()->addSearchPath(resourcePath.UTF8String);
@@ -700,10 +733,32 @@ static void glfwDropFunc(GLFWwindow *window, int count, const char **files)
     }
 }
 
+-(IBAction)setReloadGame:(id)sender
+{
+    NSInteger state = [sender state];
+    
+    if (state == NSOffState)
+    {
+        _isReloadGame = true;
+        [sender setState:NSOnState];
+    }
+    else
+    {
+        _isReloadGame = false;
+        [sender setState:NSOffState];
+    }
+}
+
 - (void)applicationWillTerminate:(NSNotification *)notification
 {
     CC_SAFE_DELETE(_app);
     [[NSApplication sharedApplication] terminate:self];
+}
+
+- (void)reloadGame
+{
+    if (_isReloadGame)
+        Director::getInstance()->replaceScene(RuntimeScene::create());
 }
 
 @end

@@ -1387,12 +1387,15 @@ _DMON_PRIVATE void dmon__fsevent_callback(ConstFSEventStreamRef stream_ref, void
 
         dmon__strcpy(abs_filepath, sizeof(abs_filepath), filepath);
 
-        // normalize path (TODO: have to recheck this to be consistent with other platforms)
-        dmon__tolower(abs_filepath, sizeof(abs_filepath), 
-            dmon__unixpath(abs_filepath, sizeof(abs_filepath), abs_filepath));
-
-        // strip the root dir
-        DMON_ASSERT(strstr(abs_filepath, watch->rootdir) == abs_filepath);
+        // > c0i
+//        // normalize path (TODO: have to recheck this to be consistent with other platforms)
+//        dmon__tolower(abs_filepath, sizeof(abs_filepath),
+//            dmon__unixpath(abs_filepath, sizeof(abs_filepath), abs_filepath));
+//
+//        // strip the root dir
+//        DMON_ASSERT(strstr(abs_filepath, watch->rootdir) == abs_filepath);
+        // < c0i
+        
         dmon__strcpy(ev.filepath, sizeof(ev.filepath), abs_filepath + strlen(watch->rootdir));
 
         ev.event_flags = flags;

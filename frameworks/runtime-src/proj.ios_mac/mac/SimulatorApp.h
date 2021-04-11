@@ -41,6 +41,7 @@
     ProjectConfig _project;
     std::string _entryPath;
     
+    bool _isReloadGame;
     //log file
     ConsoleWindowController *_consoleController;
 }
@@ -50,5 +51,5 @@
 -(BOOL)application:(NSApplication*)app openFile:(NSString*)path;
 -(IBAction)onFileClose:(id)sender;
 -(IBAction)onWindowAlwaysOnTop:(id)sender;
-
+-(IBAction)setReloadGame:(id)sender;
 @end
