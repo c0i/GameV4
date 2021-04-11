@@ -17,6 +17,7 @@ open frameworks/runtime-src/proj.ios_mac/gamev4.xcodeproj
 1. macOS 10.15.7
 2. Xcode 12.4
 
+
 ## Android
 
 Use [`Android Studio`](https://developer.android.com/studio) import the `frameworks/runtime-src/proj.android` project file.
@@ -41,8 +42,34 @@ NDK version: r16b, [Windows 64-bit](https://dl.google.com/android/repository/and
 
 2. or Download it from Android Studio -> SDK Manager
 
+
 ## Windows
+
 
 Use `Visual Studio` to open `frameworks/runtime-src/proj.win32/gamev4.sln`.
 
 1. Visual Studio 2019
+
+
+## Command line
+
+```
+# build mac
+frameworks/cocos2d-x/tools/cocos2d-console/bin/cocos compile -p mac
+
+# build ios
+frameworks/cocos2d-x/tools/cocos2d-console/bin/cocos compile -p ios
+
+# build android
+frameworks/cocos2d-x/tools/cocos2d-console/bin/cocos compile -p android
+
+# win32
+python -m pip install vswhere # to find vs 2019
+frameworks\cocos2d-x\tools\cocos2d-console\bin\cocos.bat compile -p win32 --vs 2019
+
+# win32-android
+set ANDROID_SDK_ROOT=D:/sdk/android/android-ndk-r18b
+set JAVA_HOME=D:/app/jdk-15.0.1
+frameworks\cocos2d-x\tools\cocos2d-console\bin\cocos.bat compile -p android
+```
+

@@ -11,7 +11,8 @@ VS_VERSION_MAP = {
     2012 : "11.0",
     2013 : "12.0",
     2015 : "14.0",
-    2017 : "15.0"
+    2017 : "15.0",
+    2019 : "16.0"
 }
 
 def get_msbuild_path(vs_version):
@@ -114,6 +115,12 @@ def get_devenv_path(vs_version):
                 break
             else:
                 devenv_path = None
+
+    # Fix for vs 2019, python -m pip install vswhere
+    if devenv_path is None:
+        import vswhere 
+        devenv_path = vswhere.get_latest_path()
+        devenv_path = os.path.join(devenv_path, "Common7", "IDE", "devenv.com")
 
     return devenv_path
 

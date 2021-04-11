@@ -1010,7 +1010,7 @@ class CCPluginCompile(cocos.CCPlugin):
             return ret
 
         if (major_ver > 3) or (major_ver == 3 and minor_ver >= 7):
-            ret = [ 2013, 2015, 2017 ]
+            ret = [ 2013, 2015, 2017, 2019 ]
         else:
             ret = [ 2012, 2013 ]
 
