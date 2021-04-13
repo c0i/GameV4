@@ -1,0 +1,28 @@
+name: android
+on: [push, pull_request]
+jobs:
+  runMultipleCommands:
+    runs-on: macos-latest
+    strategy:
+      matrix:
+        python-version: [2.7]
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+      - uses: nttld/setup-ndk@v1
+        with:
+          ndk-version: r16b
+      - name: set up JDK 1.8
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+      - uses: seanmiddleditch/gha-setup-ninja@master
+      - name: Compile
+        run: |
+          export NDK_ROOT=${ANDROID_NDK_ROOT}
+          env
+          ./frameworks/cocos2d-x/tools/cocos2d-console/bin/cocos --agreement n compile -p android
