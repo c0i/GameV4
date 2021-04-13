@@ -140,6 +140,7 @@ public:
     bool validate() const;
     void dump();
 
+    cocos2d::Rect consoleRect;
 private:
     string _projectDir;
     string _scriptFile;

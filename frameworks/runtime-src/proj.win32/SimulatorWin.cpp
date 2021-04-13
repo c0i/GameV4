@@ -190,7 +190,11 @@ void SimulatorWin::quit()
 
 void SimulatorWin::relaunch()
 {
+    tagRECT rect;
+    GetWindowRect(_hwndConsole, &rect);
+
     _project.setWindowOffset(Vec2(getPositionX(), getPositionY()));
+    _project.consoleRect = cocos2d::Rect(rect.left, rect.top, rect.right - rect.left, rect.bottom - rect.top);
     openNewPlayerWithProjectConfig(_project);
 
     quit();
@@ -319,6 +323,27 @@ int SimulatorWin::run()
         if (_hwndConsole != NULL)
         {
             ShowWindow(_hwndConsole, SW_SHOW);
+
+            // set console window rect
+            RECT rect;
+            GetWindowRect(_hwndConsole, &rect);
+
+            if (_project.consoleRect.size.equals(cocos2d::Size::ZERO))
+            {
+                _project.consoleRect.size = Size(rect.right - rect.left, rect.bottom - rect.top);
+            }
+            if (_project.consoleRect.origin.equals(Size::ZERO))
+            {
+                _project.consoleRect.origin = Size(rect.left, rect.top);
+            }
+            MoveWindow(_hwndConsole,
+                _project.consoleRect.origin.x,
+                _project.consoleRect.origin.y, 
+                _project.consoleRect.size.width,
+                _project.consoleRect.size.height,
+                FALSE);
+
+
             BringWindowToTop(_hwndConsole);
             freopen("CONOUT$", "wt", stdout);
             freopen("CONOUT$", "wt", stderr);

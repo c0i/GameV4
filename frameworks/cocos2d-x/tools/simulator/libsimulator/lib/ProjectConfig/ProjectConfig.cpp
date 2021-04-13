@@ -76,6 +76,8 @@ ProjectConfig::ProjectConfig()
     , _fileUploadPort(kProjectConfigUploadPort)
     , _bindAddress("")
 {
+    consoleRect = cocos2d::Rect::ZERO;
+
     normalize();
 }
 
@@ -446,6 +448,42 @@ void ProjectConfig::parseCommandLine(const vector<string> &args)
             if (it == args.end()) break;
             setLanguageDataPath(*it);
         }
+        else if (arg.compare("-console-pos") == 0)
+        {
+            ++it;
+            if (it == args.end()) break;
+            const string& posStr(*it);
+            size_t pos = posStr.find(',');
+            int x = 0;
+            int y = 0;
+            if (pos != posStr.npos && pos > 0)
+            {
+                string xStr, yStr;
+                xStr.assign(posStr, 0, pos);
+                yStr.assign(posStr, pos + 1, posStr.length() - pos);
+                x = atoi(xStr.c_str());
+                y = atoi(yStr.c_str());
+                consoleRect.origin = cocos2d::Vec2(x, y);
+            }
+        }
+        else if (arg.compare("-console-size") == 0)
+        {
+            ++it;
+            if (it == args.end()) break;
+            const string& posStr(*it);
+            size_t pos = posStr.find(',');
+            int x = 0;
+            int y = 0;
+            if (pos != posStr.npos && pos > 0)
+            {
+                string xStr, yStr;
+                xStr.assign(posStr, 0, pos);
+                yStr.assign(posStr, pos + 1, posStr.length() - pos);
+                x = atoi(xStr.c_str());
+                y = atoi(yStr.c_str());
+                consoleRect.size = cocos2d::Vec2(x, y);
+            }
+        }
         ++it;
     }
 }
@@ -563,6 +601,25 @@ vector<string> ProjectConfig::makeCommandLineVector(unsigned int mask /* = kProj
             buff << "";
 
             ret.push_back("-position");
+            ret.push_back(buff.str());
+        }
+
+        if (!consoleRect.equals(cocos2d::Rect::ZERO))
+        {
+            buff.str("");
+            buff << (int)consoleRect.origin.x;
+            buff << ",";
+            buff << (int)consoleRect.origin.y;
+
+            ret.push_back("-console-pos");
+            ret.push_back(buff.str());
+
+            buff.str("");
+            buff << (int)consoleRect.size.width;
+            buff << ",";
+            buff << (int)consoleRect.size.height;
+
+            ret.push_back("-console-size");
             ret.push_back(buff.str());
         }
     }
@@ -732,6 +789,9 @@ void ProjectConfig::dump()
     CCLOG("    show console: %s", _showConsole ? "YES" : "NO");
     CCLOG("    write debug log: (%s)", getDebugLogFilePath().c_str());
     CCLOG("    listen: %s", _bindAddress.c_str());
+    CCLOG("    console size:%d,%d,%d,%d", (int)consoleRect.origin.x, 
+        (int)consoleRect.origin.y,
+        (int)consoleRect.size.width, (int)consoleRect.size.height);
 
     if (_debuggerType == kCCRuntimeDebuggerLDT)
     {
