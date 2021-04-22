@@ -103,11 +103,12 @@ endif(BUILD_EXT_MD5)
 
 # use lua/js specific libs by property to prevent conflict
 if(BUILD_LUA_LIBS)
-    add_subdirectory(lua/luajit)
+#    add_subdirectory(lua/luajit)
+    add_subdirectory(lua/lua)
     add_subdirectory(lua/tolua)
     add_subdirectory(lua/luasocket)
     set_property(TARGET external APPEND PROPERTY 
-        CC_LUA_DEPEND ext_luajit ext_tolua ext_luasocket
+        CC_LUA_DEPEND ext_lua ext_tolua ext_luasocket #ext_luajit
     )
 endif()
 

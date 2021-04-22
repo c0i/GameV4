@@ -8,6 +8,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gamev4", "gamev4.vcxproj", 
 		{187D3E60-961A-41EE-BC18-C510A431D22E} = {187D3E60-961A-41EE-BC18-C510A431D22E}
 		{B7C2A162-DEC9-4418-972E-240AB3CBFCAE} = {B7C2A162-DEC9-4418-972E-240AB3CBFCAE}
 		{41E34993-647E-4282-8384-4AB1AE31A452} = {41E34993-647E-4282-8384-4AB1AE31A452}
+		{E3B399A6-CF80-F4B1-F899-E259E4C52940} = {E3B399A6-CF80-F4B1-F899-E259E4C52940}
 		{98A51BA8-FC3A-415B-AC8F-8C7BD464E93E} = {98A51BA8-FC3A-415B-AC8F-8C7BD464E93E}
 	EndProjectSection
 EndProject
@@ -22,6 +23,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "librecast", "..\..\cocos2d-x\external\recast\proj.win32\librecast.vcxproj", "{41E34993-647E-4282-8384-4AB1AE31A452}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libfairygui", "..\..\cocos2d-x\extensions\libfairygui\proj.win32\libfairygui.vcxproj", "{187D3E60-961A-41EE-BC18-C510A431D22E}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "liblua32", "..\..\cocos2d-x\external\lua\lua\liblua32.vcxproj", "{E3B399A6-CF80-F4B1-F899-E259E4C52940}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -73,6 +76,14 @@ Global
 		{187D3E60-961A-41EE-BC18-C510A431D22E}.Release|Win32.ActiveCfg = Release|Win32
 		{187D3E60-961A-41EE-BC18-C510A431D22E}.Release|Win32.Build.0 = Release|Win32
 		{187D3E60-961A-41EE-BC18-C510A431D22E}.Release|x64.ActiveCfg = Release|Win32
+		{E3B399A6-CF80-F4B1-F899-E259E4C52940}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E3B399A6-CF80-F4B1-F899-E259E4C52940}.Debug|Win32.Build.0 = Debug|Win32
+		{E3B399A6-CF80-F4B1-F899-E259E4C52940}.Debug|x64.ActiveCfg = Debug|x64
+		{E3B399A6-CF80-F4B1-F899-E259E4C52940}.Debug|x64.Build.0 = Debug|x64
+		{E3B399A6-CF80-F4B1-F899-E259E4C52940}.Release|Win32.ActiveCfg = Release|Win32
+		{E3B399A6-CF80-F4B1-F899-E259E4C52940}.Release|Win32.Build.0 = Release|Win32
+		{E3B399A6-CF80-F4B1-F899-E259E4C52940}.Release|x64.ActiveCfg = Release|x64
+		{E3B399A6-CF80-F4B1-F899-E259E4C52940}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
