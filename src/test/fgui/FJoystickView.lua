@@ -1,4 +1,4 @@
-local FDemoView = require("test.fgui.fdemoview")
+local FDemoView = require("test.fgui.FDemoView")
 
 local FJoystickView = class("FJoystickView", FDemoView)
 local UIPackage = fairygui.UIPackage
@@ -28,12 +28,12 @@ function FJoystickView:continueInit()
 
     local tf = self._view:getChild("n9")
 
-    self._joystick:addEventListener(JoystickModule.MOVE, function(ctx) 
+    self._joystick:addEventListener(JoystickModule.MOVE, function(ctx)
         dump(ctx, 'MOVE')
         tf:setText(ctx:getDataValue())
     end)
 
-    self._joystick:addEventListener(JoystickModule.END, function(ctx) 
+    self._joystick:addEventListener(JoystickModule.END, function(ctx)
         dump(ctx, 'END')
         tf:setText("")
     end)

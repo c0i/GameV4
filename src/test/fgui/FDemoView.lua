@@ -24,7 +24,7 @@ function FDemoView:init()
     closeButton:setSortingOrder(100000)
     closeButton:onClick(function ( ... )
         print('click button')
-        require('test/fgui/fmenuview').new():run()
+        require('test/fgui/FMenuView').new():run()
     end)
     groot:addChild(closeButton)
 end

@@ -1,4 +1,4 @@
-local FDemoView = require("test.fgui.fdemoview")
+local FDemoView = require("test.fgui.FDemoView")
 
 local FLoopListView = class("FLoopListView", FDemoView)
 local UIPackage = fairygui.UIPackage

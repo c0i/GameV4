@@ -1,4 +1,4 @@
-local FDemoView = require("test.fgui.fdemoview")
+local FDemoView = require("test.fgui.FDemoView")
 
 local FScrollPaneView = class("FScrollPaneView", FDemoView)
 local UIPackage = fairygui.UIPackage
@@ -10,7 +10,7 @@ local GRoot = fairygui.GRoot
 
 local tools = require ("tools.tools")
 
-local UIRoot 
+local UIRoot
 function FScrollPaneView:ctor()
     print("FScrollPaneView create")
     UIRoot = GRoot:getInstance()

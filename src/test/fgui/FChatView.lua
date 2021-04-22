@@ -1,4 +1,4 @@
-local FDemoView = require("test.fgui.fdemoview")
+local FDemoView = require("test.fgui.FDemoView")
 
 local FChatView = class("FChatView", FDemoView)
 local UIPackage = fairygui.UIPackage
@@ -146,7 +146,7 @@ function FChatView:addMsg(sender, senderIcon, msg, fromMe)
             replyMessage.msg = "Today is a good day. [:cool]"
             replyMessage.fromMe = false
             table.insert(self._messages, replyMessage)
-        end 
+        end
     end
 
     self._list:setNumItems(#self._messages)

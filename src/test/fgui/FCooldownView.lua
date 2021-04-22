@@ -1,4 +1,4 @@
-local FDemoView = require("test.fgui.fdemoview")
+local FDemoView = require("test.fgui.FDemoView")
 
 local FCooldownView = class("FCooldownView", FDemoView)
 local UIPackage = fairygui.UIPackage
@@ -13,7 +13,7 @@ local TweenPropType = fairygui.TweenPropType
 
 local tools = require ("tools.tools")
 
-local UIRoot 
+local UIRoot
 function FCooldownView:ctor()
     print("FCooldownView create")
     UIRoot = GRoot:getInstance()

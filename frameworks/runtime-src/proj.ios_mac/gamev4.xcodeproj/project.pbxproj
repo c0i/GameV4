@@ -1136,7 +1136,10 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/../../cocos2d-x/extensions/libfairygui/Classes";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../cocos2d-x/extensions/libfairygui/Classes",
+					"$(SRCROOT)/../../cocos2d-x/external/lua/lua",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1160,7 +1163,10 @@
 				);
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/../../cocos2d-x/extensions/libfairygui/Classes";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/../../cocos2d-x/extensions/libfairygui/Classes",
+					"$(SRCROOT)/../../cocos2d-x/external/lua/lua",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PRODUCT_NAME = "$(TARGET_NAME)";

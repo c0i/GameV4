@@ -1,4 +1,4 @@
-local FDemoView = require("test.fgui.fdemoview")
+local FDemoView = require("test.fgui.FDemoView")
 
 local FTreeViewView = class("FTreeViewView", FDemoView)
 local UIPackage = fairygui.UIPackage
@@ -11,7 +11,7 @@ local GTreeNode = fairygui.GTreeNode
 
 local tools = require ("tools.tools")
 
-local UIRoot 
+local UIRoot
 function FTreeViewView:ctor()
     print("FTreeViewView create")
     UIRoot = GRoot:getInstance()
@@ -76,7 +76,7 @@ function FTreeViewView:renderTreeNode(node, obj)
     elseif type(node:getData()) == 'table' then
     -- else if (node:getData().getType() == Value::Type::VECTOR)
     -- {
-        local data = node:getData() 
+        local data = node:getData()
         btn:setIcon(data[1])
         btn:setText(data[2])
     -- }

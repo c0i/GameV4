@@ -1,4 +1,4 @@
-local FDemoView = require("test.fgui.fdemoview")
+local FDemoView = require("test.fgui.FDemoView")
 
 local FGuideView = class("FGuideView", FDemoView)
 local UIPackage = fairygui.UIPackage
@@ -13,7 +13,7 @@ local TweenPropType = fairygui.TweenPropType
 
 local tools = require ("tools.tools")
 
-local UIRoot 
+local UIRoot
 function FGuideView:ctor()
     print("FGuideView create")
     UIRoot = GRoot:getInstance()

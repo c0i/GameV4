@@ -1,5 +1,5 @@
 
-local FDemoView = require ("test.fgui.fdemoview")
+local FDemoView = require ("test.fgui.FDemoView")
 
 local FVirtualListView = class('FVirtualListView', FDemoView)
 local UIPackage = fairygui.UIPackage
