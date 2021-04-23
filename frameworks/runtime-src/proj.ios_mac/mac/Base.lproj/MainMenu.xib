@@ -177,7 +177,7 @@
                             <menuItem title="Reload Game" id="39E-AY-So2">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <connections>
-                                    <action selector="setReloadGame:" target="-2" id="vJs-fX-0ho"/>
+                                    <action selector="setReloadGame:" target="-1" id="GqX-ed-4EI"/>
                                 </connections>
                             </menuItem>
                         </items>
