@@ -386,11 +386,9 @@ std::string FileUtilsApple::getFullPathForFilenameWithinDirectory(const std::str
     else
     {
         std::string fullPath = directory+filename;
-        NSString *nsFullPath = [NSString stringWithUTF8String:fullPath.c_str()];
-        nsFullPath = [nsFullPath stringByStandardizingPath];
         // Search path is an absolute path.
         if ([s_fileManager fileExistsAtPath:[NSString stringWithUTF8String:fullPath.c_str()]]) {
-            _checkPathCase(nsFullPath.UTF8String);
+            _checkPathCase(fullPath);
             return fullPath;
         }
     }
