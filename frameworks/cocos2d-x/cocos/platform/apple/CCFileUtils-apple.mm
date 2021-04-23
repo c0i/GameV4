@@ -42,6 +42,35 @@ THE SOFTWARE.
 
 NS_CC_BEGIN
 
+static std::string my_realpath(std::string fullpath)
+{
+    std::string path("");
+    char *my_realpath = realpath(fullpath.c_str(), NULL);
+    if (my_realpath)
+    {
+        path.assign(my_realpath);
+        free(my_realpath);
+    }
+    return path;
+}
+
+bool _checkPathCase(std::string fullpath)
+{
+    bool ret = true;
+    
+    NSString *nsFullPath = [NSString stringWithUTF8String:fullpath.c_str()];
+    nsFullPath = [nsFullPath stringByStandardizingPath];
+    fullpath.assign(nsFullPath.UTF8String);
+    
+    std::string path = my_realpath(fullpath);
+    if (path != fullpath)
+    {
+        ret = false;
+        log("[ERROR] Path case problem:\n%s\n%s\n", fullpath.c_str(), path.c_str());
+    }
+    return ret;
+}
+
 struct FileUtilsApple::IMPL {
     IMPL(NSBundle* bundle):bundle_([NSBundle mainBundle]) {}
     void setBundle(NSBundle* bundle) {
@@ -357,8 +386,11 @@ std::string FileUtilsApple::getFullPathForFilenameWithinDirectory(const std::str
     else
     {
         std::string fullPath = directory+filename;
+        NSString *nsFullPath = [NSString stringWithUTF8String:fullPath.c_str()];
+        nsFullPath = [nsFullPath stringByStandardizingPath];
         // Search path is an absolute path.
         if ([s_fileManager fileExistsAtPath:[NSString stringWithUTF8String:fullPath.c_str()]]) {
+            _checkPathCase(nsFullPath.UTF8String);
             return fullPath;
         }
     }
