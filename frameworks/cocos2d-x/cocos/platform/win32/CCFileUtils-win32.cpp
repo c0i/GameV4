@@ -35,6 +35,8 @@ THE SOFTWARE.
 #include <sys/types.h>  
 #include <sys/stat.h>  
 
+#include "filesystem/path.h"
+
 using namespace std;
 
 #define DECLARE_GUARD std::lock_guard<std::recursive_mutex> mutexGuard(_mutex)
@@ -60,6 +62,44 @@ static inline std::string convertPathFormatToUnixStyle(const std::string& path)
         }
     }
     return ret;
+}
+
+// convert a abs path to abs real path
+static std::string _realpath(std::string strPath)
+{
+    auto pathComs = Console::Utility::split(strPath, '/');
+    auto ret = pathComs.at(0);
+    std::string realpath = pathComs.at(0);
+    const auto size = pathComs.size();
+    for (size_t i = 1; i < size; i++)
+    {
+        ret = ret + "/" + pathComs.at(i);
+        {
+            HANDLE hFind = NULL;
+            WIN32_FIND_DATA fd = { 0 };
+            hFind = FindFirstFile(StringUtf8ToWideChar(ret).c_str(), &fd);
+            if (hFind != INVALID_HANDLE_VALUE)
+            {
+                FindClose(hFind);
+                realpath += "/" + StringWideCharToUtf8(fd.cFileName);
+            }
+        }
+    }
+
+    return realpath;
+}
+
+static void _checkPathCase(std::string strPath)
+{
+    filesystem::path path2(strPath);
+    path2 = path2.make_absolute();
+    std::string path = convertPathFormatToUnixStyle(path2.str());
+
+    std::string realpath = _realpath(path);
+    if (path != realpath)
+    {
+        cocos2d::log("[ERROR] Path case problem:\n%s\n%s\n", path.c_str(), realpath.c_str());
+    }
 }
 
 static void _checkPath()
@@ -150,9 +190,12 @@ bool FileUtilsWin32::isFileExistInternal(const std::string& strFilePath) const
         strPath.insert(0, _defaultResRootPath);
     }
 
+
     DWORD attr = GetFileAttributesW(StringUtf8ToWideChar(strPath).c_str());
     if(attr == INVALID_FILE_ATTRIBUTES || (attr & FILE_ATTRIBUTE_DIRECTORY))
         return false;   //  not a file
+
+    _checkPathCase(strPath);
     return true;
 }
 
